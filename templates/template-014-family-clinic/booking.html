@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>線上預約掛號｜信安安康家庭診所</title>
+<meta name="description" content="提供未來七日內門診預約掛號，送出後即時完成保留排號。">
+<link rel="canonical" href="./booking.html">
+<meta property="og:title" content="線上預約掛號｜信安安康家庭診所">
+<meta property="og:description" content="提供未來七日內門診預約掛號，送出後即時完成保留排號。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="infobar">
+  <div class="wrap">
+    <span>健保特約家庭醫學專科 ｜ 當日預約專線 02-2700-1199 ｜ 現場叫號即時查詢</span>
+    <span>週一至週六 早診 08:30–12:00 ｜ 午晚診 14:30–21:00</span>
+  </div>
+</div>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html">信安安康<em>家庭診所</em></a>
+    <nav class="nav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">診所首頁</a></li>
+        <li><a href="services.html">診療科別</a></li>
+        <li><a href="service-detail.html">慢性病照護</a></li>
+        <li><a href="portfolio.html">診所設施</a></li>
+        <li><a href="about.html">醫師團隊</a></li>
+        <li><a href="process.html">就診須知</a></li>
+        <li><a href="blog.html">衛教專欄</a></li>
+        <li><a href="contact.html">門診時刻</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">診所首頁</a>
+    <a href="services.html">診療科別</a>
+    <a href="service-detail.html">慢性病照護</a>
+    <a href="portfolio.html">診所設施</a>
+    <a href="about.html">醫師團隊</a>
+    <a href="reviews.html">病友評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">線上預約掛號</a>
+    <a href="process.html">就診須知</a>
+    <a href="blog.html">衛教專欄</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">門診時刻</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap" style="max-width:860px">
+    <p class="kicker">ONLINE APPOINTMENT</p>
+    <h1 style="font-size:clamp(34px,5vw,56px);margin:0 0 18px">線上預約門診</h1>
+    <p class="lead">請填寫預計看診資料，當日憑健保卡於門診開始前至櫃台報到即可。</p>
+    <div class="form" style="margin-top:30px">
+      <form data-fake="✓ 掛號成功！預約號碼 #18，請於門診時間截止前 30 分鐘攜帶健保卡至櫃台完成報到。">
+        <div class="grid2">
+          <div><label for="bk-name">病患姓名 *</label><input id="bk-name" type="text" placeholder="王小明" required></div>
+          <div><label for="bk-id">身分證字號 *</label><input id="bk-id" type="text" placeholder="A123456789" required></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-phone">聯絡手機 *</label><input id="bk-phone" type="tel" placeholder="0912-345-678" required></div>
+          <div><label for="bk-birth">出生年月日 *</label><input id="bk-birth" type="date" required></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-doc">指定醫師 *</label><select id="bk-doc"><option>不指定（當班主治醫師）</option><option>林宏達 院長（家醫專科）</option><option>陳宛儀 醫師（新陳代謝）</option><option>黃柏彥 醫師（老人醫學）</option></select></div>
+          <div><label for="bk-time">就診時段 *</label><select id="bk-time"><option>早診 08:30–12:00</option><option>午診 14:30–17:30</option><option>晚診 18:30–21:00</option></select></div>
+        </div>
+        <div><label for="bk-note">主訴症狀簡述（感冒發燒、三高慢箋領藥、常規檢查等）</label><textarea id="bk-note" rows="3" placeholder="請簡要填寫您的身體狀況…"></textarea></div>
+        <button class="btn" type="submit">確認送出掛號</button>
+        <p class="msg" aria-live="polite" style="font-size:16px;text-align:center"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="f-grid">
+    <div><h5>信安安康家庭診所</h5><p>台大、榮總資深專科醫師陣容，提供家庭醫學、慢性病整合照護、小兒成人疫苗與成人健康檢查。</p></div>
+    <div><h5>診療項目</h5><a href="services.html">家庭醫學科</a><a href="services.html">三高慢性病</a><a href="services.html">疫苗接種</a><a href="services.html">一般外傷處理</a></div>
+    <div><h5>就診服務</h5><a href="contact.html">門診時刻表</a><a href="booking.html">線上掛號</a><a href="faq.html">常見問題</a><a href="blog.html">衛教專欄</a></div>
+    <div><h5>診所資訊</h5><p>台北市大安區和平東路二段 88 號 1F<br>電話：02-2700-1199<br>捷運科技大樓站步行 3 分鐘</p></div>
+  </div>
+  <div class="fmeta">© 2026 信安安康家庭醫學科診所 ｜ 健保特約醫療機構 ｜ 圖片為設計示意</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

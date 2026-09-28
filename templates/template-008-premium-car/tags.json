@@ -1,0 +1,33 @@
+{
+  "id": "template-008",
+  "name": "Premium Car",
+  "industryCategory": "零售商品",
+  "industry": [
+    "豪華車商",
+    "進口名車",
+    "超跑展示中心"
+  ],
+  "colors": [
+    "黑銀速度感"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "HUD 圓形儀表動畫",
+    "碳纖維規格卡",
+    "水平數據拉桿",
+    "現車庫存清單",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "AutoDealer Schema"
+  ],
+  "layout": [
+    "Product Catalog 商品目錄型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

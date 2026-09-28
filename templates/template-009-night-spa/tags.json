@@ -1,0 +1,33 @@
+{
+  "id": "template-009",
+  "name": "Night Spa",
+  "industryCategory": "美容健康",
+  "industry": [
+    "精油芳療SPA",
+    "夜間養生會館",
+    "音療與頌缽中心"
+  ],
+  "colors": [
+    "深綠黑療癒"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "拱形圓弧 Hero 框",
+    "印章序號儀式步驟",
+    "鵝卵石相框療程展示",
+    "靜謐宣言橫捲軸",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "DaySpa Schema"
+  ],
+  "layout": [
+    "Fullscreen Visual 沉浸視覺型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

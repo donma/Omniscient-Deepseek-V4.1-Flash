@@ -1,0 +1,27 @@
+{
+  "id": "template-002",
+  "name": "Cyber Security",
+  "industryCategory": "科技商務",
+  "industry": ["資訊安全", "SOC", "資安顧問"],
+  "colors": ["深色底", "深藍黑", "科技網格"],
+  "backgroundMode": "dark",
+  "features": [
+    "資料儀表板 Hero",
+    "威脅情資摘要",
+    "MDR 服務說明",
+    "滲透測試",
+    "預約評估表單",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "Organization Schema",
+    "圖片豐富"
+  ],
+  "layout": ["Dashboard / Data 信任型", "B2B 企業官網", "科技網格"],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

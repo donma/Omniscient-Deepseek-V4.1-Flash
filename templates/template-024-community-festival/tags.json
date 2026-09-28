@@ -1,0 +1,33 @@
+{
+  "id": "template-024",
+  "name": "Community Festival",
+  "industryCategory": "活動組織",
+  "industry": [
+    "社區生活節",
+    "街區市集策展",
+    "文創嘉年華"
+  ],
+  "colors": [
+    "明亮高彩"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "台式新普普貼紙 Hero",
+    "粗黑框硬陰影風格",
+    "條碼頂欄",
+    "兩日野台節目時刻表",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "Festival Schema"
+  ],
+  "layout": [
+    "Event / Campaign 活動型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

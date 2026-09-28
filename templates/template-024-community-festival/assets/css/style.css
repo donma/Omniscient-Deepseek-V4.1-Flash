@@ -1,0 +1,130 @@
+/* T024 v2 — Neo-Pop Carnival Sticker Language */
+    :root{
+  --yellow:#ffea00; --pink:#ff1493; --cyan:#00f0ff; --green:#00e676; --orange:#ff5722;
+  --bg:#fefae0; --ink:#000000; --muted:#4a3f35; --sans:"Arial Black","Noto Sans TC",sans-serif;
+  --mono:"Consolas",monospace;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.65;
+  background-image:radial-gradient(var(--ink) 2px, transparent 2px);background-size:28px 28px}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3,h4{font-weight:900;letter-spacing:-.01em;text-transform:uppercase}
+    :focus-visible{outline:4px solid var(--pink);outline-offset:3px}
+    .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+    .kicker{display:inline-block;background:var(--pink);color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.2em;padding:4px 14px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);transform:rotate(-2deg);margin-bottom:12px}
+    .sec{padding:80px 0;border-top:4px solid var(--ink)}
+    .lead{color:var(--muted);max-width:620px;font-family:"Noto Sans TC",sans-serif;font-weight:700}
+    .btn{display:inline-block;padding:14px 34px;background:var(--yellow);color:var(--ink);font-weight:900;letter-spacing:.08em;border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);transition:.15s;text-transform:uppercase;font-size:15px}
+    .btn:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 var(--ink);background:var(--cyan)}
+    .btn-pink{background:var(--pink);color:#fff}
+    .btn-pink:hover{background:var(--orange)}
+    .btn-ghost{background:#fff;color:var(--ink)}
+
+    /* 粗黑條碼與頂欄 */
+    .tape{background:var(--yellow);color:var(--ink);border-bottom:4px solid var(--ink);padding:9px 0;font-weight:900;font-size:13px;letter-spacing:.12em;text-align:center;overflow:hidden;white-space:nowrap}
+    header.hd{position:sticky;top:0;z-index:60;background:var(--bg);border-bottom:4px solid var(--ink)}
+    .hd-in{max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:22px;font-weight:900;color:var(--ink);letter-spacing:.02em;background:var(--cyan);border:3px solid var(--ink);padding:6px 14px;box-shadow:4px 4px 0 var(--ink);transform:rotate(-1deg)}
+    .nav ul{display:flex;gap:8px;list-style:none;margin:0;padding:0}
+    .nav a{display:block;padding:6px 14px;font-size:14px;font-weight:900;border:3px solid var(--ink);background:#fff;box-shadow:3px 3px 0 var(--ink);border-radius:4px}
+    .nav a:hover{background:var(--pink);color:#fff;transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+    .nav a.active{background:var(--yellow);color:var(--ink)}
+    .burger{display:none;width:48px;height:48px;background:var(--yellow);border:3px solid var(--ink);box-shadow:3px 3px 0 var(--ink);font-size:22px;font-weight:900}
+    .drawer{display:none;background:var(--yellow);border-bottom:4px solid var(--ink);padding:14px 24px 20px}
+    .drawer.open{display:block}
+    .drawer a{display:block;padding:10px 0;border-bottom:2px solid var(--ink);font-size:16px;font-weight:900}
+
+    /* Hero: 粗黑框旋轉海報貼紙 */
+    .carnival-hero{padding:60px 0 54px;position:relative}
+    .hero-box{border:5px solid var(--ink);background:#fff;padding:50px 44px;box-shadow:12px 12px 0 var(--ink);position:relative}
+    .sticker{position:absolute;background:var(--pink);color:#fff;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);padding:8px 18px;font-size:14px;font-weight:900;letter-spacing:.1em}
+    .st-1{top:-20px;right:30px;transform:rotate(6deg);background:var(--yellow);color:var(--ink)}
+    .st-2{bottom:-18px;left:40px;transform:rotate(-4deg);background:var(--green);color:#fff}
+    .hero-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+    .hero-copy h1{font-size:clamp(40px,5.8vw,80px);line-height:1.02;margin:0 0 16px}
+    .hero-copy h1 em{font-style:normal;background:var(--cyan);padding:0 8px;border:3px solid var(--ink);display:inline-block;transform:rotate(-1deg);box-shadow:4px 4px 0 var(--ink)}
+    .hero-copy p{font-size:16.5px;color:var(--muted);max-width:500px;font-family:"Noto Sans TC",sans-serif;font-weight:700}
+    .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+    .hero-fig img{width:100%;height:380px;object-fit:cover;border:4px solid var(--ink);box-shadow:8px 8px 0 var(--ink)}
+
+    /* 粗框貼紙攤位格 */
+    .sticker-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+    .stk-card{background:#fff;border:4px solid var(--ink);box-shadow:8px 8px 0 var(--ink);padding:0;position:relative;overflow:hidden;transition:.15s}
+    .stk-card:hover{transform:translate(-3px,-3px);box-shadow:12px 12px 0 var(--ink)}
+    .stk-card img{height:220px;width:100%;object-fit:cover;border-bottom:4px solid var(--ink)}
+    .stk-card .body{padding:22px}
+    .stk-tag{display:inline-block;background:var(--yellow);border:2px solid var(--ink);padding:3px 10px;font-size:11px;font-weight:900;letter-spacing:.08em;margin-bottom:8px;box-shadow:2px 2px 0 var(--ink)}
+    .stk-card h3{margin:0 0 8px;font-size:22px}
+    .stk-card p{color:var(--muted);font-size:14px;margin:0;font-family:"Noto Sans TC",sans-serif;font-weight:600}
+
+    /* 雙日時刻表粗框 */
+    .sched-box{background:#fff;border:4px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:0;overflow:hidden}
+    .sched-head{background:var(--cyan);border-bottom:4px solid var(--ink);padding:14px 24px;display:flex;justify-content:space-between;align-items:center}
+    .sched-head h3{margin:0;font-size:20px}
+    .sched-row{display:grid;grid-template-columns:120px 1.2fr 1fr;gap:16px;padding:16px 24px;border-bottom:2px solid var(--ink);align-items:center;font-size:15px}
+    .sched-row:last-child{border-bottom:none}
+    .sched-row b{font-family:var(--mono);color:var(--pink)}
+
+    /* 貼紙留言與問答 */
+    .quote-stickers{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .qstk{border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink);padding:24px;background:#fff;position:relative}
+    .qstk.rot-1{transform:rotate(-1.5deg);background:var(--bg2)}
+    .qstk.rot-2{transform:rotate(1deg);background:#e0f2fe}
+    .qstk.rot-3{transform:rotate(-2deg);background:#fce7f3}
+    .qstk p{font-size:16px;margin:0 0 10px;font-family:"Noto Sans TC",sans-serif;font-weight:700}
+    .qstk span{font-family:var(--mono);font-size:12px;color:var(--muted);font-weight:900}
+
+    /* 表單與 FAQ */
+    .form{background:#fff;border:4px solid var(--ink);box-shadow:10px 10px 0 var(--ink);padding:36px}
+    .form label{display:block;font-size:13px;letter-spacing:.05em;color:var(--ink);margin:16px 0 6px;font-weight:900}
+    .form input,.form select,.form textarea{width:100%;background:var(--bg);border:3px solid var(--ink);color:var(--ink);padding:12px 14px;font-size:15px;font-weight:700;font-family:"Noto Sans TC",sans-serif;border-radius:0}
+    .form input:focus,.form textarea:focus,.form select:focus{background:#fff;outline:none}
+    .form .btn{margin-top:24px;width:100%;text-align:center}
+    .form .msg{color:var(--pink);margin-top:14px;font-weight:900;text-align:center}
+    .faq{border-top:4px solid var(--ink)}
+    .faq details{border-bottom:2px solid var(--ink);background:#fff;margin-bottom:8px;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink)}
+    .faq summary{cursor:pointer;padding:16px 20px;font-size:16px;font-weight:900;list-style:none;display:flex;justify-content:space-between}
+    .faq summary::after{content:"▶";font-size:14px}
+    .faq details[open] summary::after{content:"▼"}
+    .faq p{color:var(--muted);padding:0 20px 20px;margin:0;font-family:"Noto Sans TC",sans-serif;font-weight:600}
+    .tbl{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border:4px solid var(--ink)}
+    .tbl th,.tbl td{border:2px solid var(--ink);padding:14px 16px;text-align:left}
+    .tbl th{background:var(--yellow);font-weight:900}
+    .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .post{background:#fff;border:4px solid var(--ink);box-shadow:6px 6px 0 var(--ink)}
+    .post img{height:200px;width:100%;object-fit:cover;border-bottom:3px solid var(--ink)}
+    .post .body{padding:20px}
+    .post .date{font-family:var(--mono);font-size:11.5px;color:var(--pink);font-weight:900}
+    .post h3{margin:8px 0;font-size:18px}
+    .post p{color:var(--muted);font-size:14px;margin:0 0 12px;font-family:"Noto Sans TC",sans-serif;font-weight:600}
+    .post a{color:var(--ink);font-weight:900;font-size:14px;border-bottom:3px solid var(--pink)}
+    .article{max-width:800px;margin:0 auto}
+    .article h2{margin-top:40px;color:var(--pink)}
+    .article p,.article li{color:#3a2f26;font-family:"Noto Sans TC",sans-serif;font-weight:600}
+    .article figure{margin:28px 0}
+    .article figcaption{color:var(--muted);font-size:13px;margin-top:8px;font-family:var(--mono)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+    /* 廟會貼紙大頁尾 */
+    footer{background:var(--ink);color:#fff;padding:56px 0 0;text-align:center;border-top:8px solid var(--pink)}
+    .f-badge{display:inline-block;background:var(--yellow);color:var(--ink);border:3px solid #fff;padding:8px 24px;font-size:22px;font-weight:900;letter-spacing:.08em;margin-bottom:20px;box-shadow:6px 6px 0 var(--pink);transform:rotate(-2deg)}
+    footer .fnav{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:22px 0 18px;padding:0;list-style:none}
+    footer .fnav a{color:#fff;font-weight:900;font-size:14px;background:#2a2a2a;padding:5px 14px;border:2px solid #555}
+    footer .fnav a:hover{background:var(--cyan);color:var(--ink);border-color:#fff}
+    .fmeta{border-top:3px solid #333;margin-top:40px;padding:20px;color:#888;font-size:12.5px;font-family:var(--mono)}
+    .totop{position:fixed;right:22px;bottom:22px;width:52px;height:52px;background:var(--yellow);color:var(--ink);border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);font-size:22px;display:none;z-index:70;font-weight:900}
+    .totop.show{display:block}
+
+    @media(max-width:960px){
+  .hero-layout,.sticker-grid,.quote-stickers,.grid2,.grid3{grid-template-columns:1fr}
+  .nav{display:none}
+  .burger{display:block}
+    }
+    @media(max-width:640px){
+  .hero-box{padding:30px 20px}
+  .sched-row{grid-template-columns:1fr}
+  .sec{padding:54px 0}
+    }
+    

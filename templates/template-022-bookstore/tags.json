@@ -1,0 +1,33 @@
+{
+  "id": "template-022",
+  "name": "Bookstore",
+  "industryCategory": "地方品牌",
+  "industry": [
+    "獨立書店",
+    "日式人文選書店",
+    "閱讀推廣沙龍"
+  ],
+  "colors": [
+    "暖棕紙感"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "全站唯一直排文字 Hero（vertical-rl）",
+    "書名短冊陳列",
+    "直立書脊陳列架",
+    "日式藏書印章",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "BookStore Schema"
+  ],
+  "layout": [
+    "Knowledge Hub 知識中心型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

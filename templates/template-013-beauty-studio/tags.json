@@ -1,0 +1,33 @@
+{
+  "id": "template-013",
+  "name": "Beauty Studio",
+  "industryCategory": "美妝美業",
+  "industry": [
+    "美容美業工作室",
+    "皮膚管理中心",
+    "美睫美甲沙龍"
+  ],
+  "colors": [
+    "奶茶柔和"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "左右分割 Hero",
+    "療程菜單板",
+    "客人保養紀實",
+    "LINE 預約",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "BeautySalon Schema"
+  ],
+  "layout": [
+    "左右分割 Split Layout"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

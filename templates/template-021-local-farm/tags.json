@@ -1,0 +1,33 @@
+{
+  "id": "template-021",
+  "name": "Local Farm",
+  "industryCategory": "地方品牌",
+  "industry": [
+    "友善農業農場",
+    "觀光休閒農園",
+    "食農教育基地"
+  ],
+  "colors": [
+    "綠色大地"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "四季長卷軸敘事",
+    "側邊章節錨點導覽",
+    "認養方案清單",
+    "週末參訪預約",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "TouristAttraction Schema"
+  ],
+  "layout": [
+    "Storytelling 長卷軸"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

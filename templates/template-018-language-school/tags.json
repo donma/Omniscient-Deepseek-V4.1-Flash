@@ -1,0 +1,34 @@
+{
+  "id": "template-018",
+  "name": "Language School",
+  "industryCategory": "教育課程",
+  "industry": [
+    "成人語言學院",
+    "商務英文特訓",
+    "留學檢定中心"
+  ],
+  "colors": [
+    "明亮藍黃"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "地鐵路線頂欄",
+    "站牌式 Hero",
+    "Transit Map 路線節點",
+    "票價閘門卡",
+    "外師識別證吊牌",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "EducationalOrganization Schema"
+  ],
+  "layout": [
+    "Pricing-first 方案導向型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

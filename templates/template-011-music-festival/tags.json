@@ -1,0 +1,33 @@
+{
+  "id": "template-011",
+  "name": "Music Festival",
+  "industryCategory": "活動組織",
+  "industry": [
+    "音樂祭",
+    "戶外派對",
+    "展演售票活動"
+  ],
+  "colors": [
+    "黑紫舞台"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "倒數計時器",
+    "演出陣容海報",
+    "三階票券卡",
+    "舞台地圖",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "Festival Schema"
+  ],
+  "layout": [
+    "Event / Campaign 活動型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

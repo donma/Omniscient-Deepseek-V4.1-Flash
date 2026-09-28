@@ -1,0 +1,134 @@
+/* T022 v2 — Japanese Vertical Spine Bookstore */
+    :root{
+  --washi:#faf6ee; --washi-dark:#ede4d3; --wood:#2b1e15; --vermilion:#c0392b; --sumi:#1a1512;
+  --tan:#7d6b5c; --border:#dfd4be; --muted:#7d6b5c; --serif:"Noto Serif TC",serif; --sans:"Noto Sans TC",sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--washi);color:var(--sumi);font-family:var(--sans);line-height:1.8;
+  background-image:radial-gradient(var(--border) 1px, transparent 1px);background-size:28px 28px}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3,h4{font-family:var(--serif);font-weight:600;letter-spacing:.06em;color:var(--wood)}
+    :focus-visible{outline:2px solid var(--vermilion);outline-offset:3px}
+    .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+    .kicker{font-family:var(--serif);font-size:12px;letter-spacing:.4em;color:var(--vermilion);margin-bottom:12px}
+    .sec{padding:84px 0}
+    .sec-alt{background:var(--washi-dark);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+    .lead{color:var(--tan);max-width:600px}
+    .btn{display:inline-block;padding:14px 34px;background:var(--wood);color:#fff;font-family:var(--serif);letter-spacing:.25em;border:none;border-radius:2px;transition:.2s}
+    .btn:hover{background:var(--vermilion)}
+    .btn-ghost{background:transparent;color:var(--wood);border:1px solid var(--wood)}
+    .btn-ghost:hover{background:var(--wood);color:#fff}
+
+    /* 和紙頂欄：直排藏書章 */
+    header.hd{position:sticky;top:0;z-index:60;background:rgba(250,246,238,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+    .hd-in{max-width:1160px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .seal-square{width:36px;height:36px;border:2px solid var(--vermilion);color:var(--vermilion);display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:17px;line-height:1}
+    .brand-name{font-family:var(--serif);font-size:22px;letter-spacing:.3em}
+    .brand-name small{display:block;font-size:9.5px;letter-spacing:.4em;color:var(--tan)}
+    .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+    .nav a{font-family:var(--serif);font-size:14.5px;color:var(--sumi);padding-bottom:4px;border-bottom:2px solid transparent}
+    .nav a:hover{color:var(--vermilion);border-color:var(--vermilion)}
+    .nav a.active{color:var(--vermilion);border-color:var(--vermilion)}
+    .burger{display:none;width:44px;height:44px;background:transparent;border:1px solid var(--border);color:var(--wood);font-size:20px}
+    .drawer{display:none;background:var(--washi-dark);border-bottom:1px solid var(--border);padding:12px 24px 20px}
+    .drawer.open{display:block}
+    .drawer a{display:block;padding:13px 4px;color:var(--sumi);border-bottom:1px solid var(--border);font-family:var(--serif);font-size:16px}
+
+    /* Hero: 日式直書書架長廊 (全站唯一直排文字區) */
+    .tate-hero{padding:70px 0 54px;border-bottom:1px solid var(--border)}
+    .tate-layout{display:flex;justify-content:space-between;align-items:stretch;gap:40px}
+    .tate-box{writing-mode:vertical-rl;text-orientation:mixed;padding:20px 0;display:flex;gap:36px;height:520px}
+    .tate-box h1{font-size:clamp(36px,4.6vw,56px);line-height:1.6;margin:0;letter-spacing:.25em}
+    .tate-box h1 em{font-style:normal;color:var(--vermilion)}
+    .tate-box p{color:var(--tan);font-size:16px;line-height:2.2;margin:0;max-height:460px}
+    .tate-box .tate-seal{border:2px solid var(--vermilion);color:var(--vermilion);padding:12px 4px;font-family:var(--serif);font-size:13px;letter-spacing:.2em;align-self:flex-start}
+    .hero-fig-box{flex:1;position:relative;min-height:520px;border:1px solid var(--border);overflow:hidden}
+    .hero-fig-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .hero-bottom-cta{margin-top:30px;display:flex;gap:16px;align-items:center}
+
+    /* 直排書脊展示格（Spine Rack） */
+    .spines{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .spine{background:var(--panel);border:1px solid var(--border);border-top:5px solid var(--wood);box-shadow:0 8px 24px rgba(43,30,21,.06);display:flex;flex-direction:column;transition:.25s}
+    .spine:hover{transform:translateY(-6px);border-top-color:var(--vermilion);box-shadow:0 14px 34px rgba(192,57,43,.12)}
+    .spine-fig{height:200px;overflow:hidden;background:#eee}
+    .spine-fig img{width:100%;height:100%;object-fit:cover}
+    .spine-body{padding:20px;display:flex;gap:14px;flex:1}
+    .tanzaku{writing-mode:vertical-rl;border-left:1px dashed var(--border);padding-left:10px;font-family:var(--serif);font-size:16px;font-weight:600;letter-spacing:.18em;color:var(--wood);height:140px}
+    .spine-desc{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+    .spine-desc .auth{font-size:12.5px;color:var(--tan)}
+    .spine-desc p{font-size:13px;color:var(--tan);margin:8px 0 0;line-height:1.6}
+    .spine-desc .t-seal{align-self:flex-start;border:1px solid var(--border);padding:2px 8px;font-size:11px;color:var(--vermilion);margin-top:10px}
+
+    /* 短冊形讀書會方案 */
+    .tanzaku-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .tz-plan{background:var(--panel);border:1px solid var(--border);padding:36px 28px;box-shadow:0 8px 24px rgba(43,30,21,.05);position:relative}
+    .tz-plan::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:var(--wood)}
+    .tz-plan.hot::before{background:var(--vermilion)}
+    .tz-plan .ch{font-family:var(--serif);font-size:12px;color:var(--vermilion);letter-spacing:.3em;text-align:center;margin-bottom:8px}
+    .tz-plan h3{text-align:center;font-size:22px;margin:0 0 12px}
+    .tz-plan .price{font-family:var(--serif);font-size:26px;color:var(--wood);text-align:center;margin-bottom:18px}
+    .tz-plan ul{list-style:none;padding:0;margin:0 0 24px;color:var(--tan);font-size:14px}
+    .tz-plan li{padding:7px 0;border-bottom:1px dotted var(--border);display:flex;justify-content:space-between}
+
+    /* 讀者墨筆評語 */
+    .ink-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .ink-rev{background:var(--panel);border:1px solid var(--border);padding:26px 22px;position:relative}
+    .ink-rev .seal{position:absolute;top:16px;right:16px;width:32px;height:32px;border:1px solid var(--vermilion);color:var(--vermilion);display:grid;place-items:center;font-family:var(--serif);font-size:14px}
+    .ink-rev p{font-family:var(--serif);font-size:16px;color:var(--sumi);line-height:1.75;margin:0 0 14px}
+    .ink-rev span{font-size:12.5px;color:var(--tan)}
+
+    /* FAQ / 表單 / 表格 */
+    .faq{border-top:1px solid var(--border)}
+    .faq details{border-bottom:1px solid var(--border);padding:18px 4px}
+    .faq summary{cursor:pointer;font-family:var(--serif);font-size:16.5px;color:var(--wood);list-style:none;display:flex;justify-content:space-between}
+    .faq summary::after{content:"＋";color:var(--vermilion)}
+    .faq details[open] summary::after{content:"−"}
+    .faq p{color:var(--tan);margin:12px 0 0}
+    .form{background:var(--panel);border:1px solid var(--border);padding:36px;box-shadow:0 12px 30px rgba(43,30,21,.06)}
+    .form label{display:block;font-family:var(--serif);font-size:12.5px;letter-spacing:.2em;color:var(--wood);margin:16px 0 6px}
+    .form input,.form select,.form textarea{width:100%;background:var(--washi);border:1px solid var(--border);color:var(--sumi);padding:12px 14px;border-radius:0;font-family:var(--sans)}
+    .form input:focus,.form textarea:focus,.form select:focus{border-color:var(--vermilion);outline:none}
+    .form .btn{margin-top:24px;width:100%;text-align:center}
+    .form .msg{color:var(--vermilion);margin-top:14px;font-family:var(--serif);text-align:center;letter-spacing:.15em}
+    .tbl{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--panel)}
+    .tbl th,.tbl td{border-bottom:1px solid var(--border);padding:14px 16px;text-align:left}
+    .tbl th{background:var(--washi-dark);color:var(--wood);font-family:var(--serif)}
+    .tbl td b{color:var(--vermilion)}
+    .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .post{background:var(--panel);border:1px solid var(--border)}
+    .post img{height:200px;width:100%;object-fit:cover}
+    .post .body{padding:20px}
+    .post .date{font-family:var(--serif);font-size:12px;color:var(--vermilion);letter-spacing:.15em}
+    .post h3{margin:8px 0;font-size:18px}
+    .post p{color:var(--tan);font-size:14px;margin:0 0 12px}
+    .post a{color:var(--wood);font-family:var(--serif);font-size:14px;border-bottom:1px solid var(--border)}
+    .article{max-width:760px;margin:0 auto}
+    .article h2{margin-top:40px;color:var(--wood)}
+    .article p,.article li{color:#3d332a}
+    .article figure{margin:28px 0}
+    .article figcaption{color:var(--tan);font-size:13px;margin-top:8px;font-family:var(--serif)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+    footer{background:var(--washi-dark);border-top:2px solid var(--wood);padding:54px 0 0;text-align:center}
+    footer .logo{font-family:var(--serif);font-size:26px;color:var(--wood);letter-spacing:.3em}
+    footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:22px 0 18px;padding:0;list-style:none}
+    footer .fnav a{color:var(--sumi);font-family:var(--serif);font-size:14px}
+    footer .fnav a:hover{color:var(--vermilion)}
+    .fmeta{border-top:1px solid var(--border);padding:20px;color:var(--tan);font-size:12.5px;letter-spacing:.1em}
+    .totop{position:fixed;right:22px;bottom:22px;width:44px;height:44px;background:var(--wood);color:#fff;border:none;font-size:18px;display:none;z-index:70}
+    .totop.show{display:block}
+
+    @media(max-width:960px){
+  .tate-layout{flex-direction:column}
+  .tate-box{writing-mode:horizontal-tb;height:auto;gap:16px}
+  .spines,.tanzaku-plans,.ink-reviews,.grid2,.grid3{grid-template-columns:1fr}
+  .nav{display:none}
+  .burger{display:block}
+    }
+    @media(max-width:640px){
+  .sec{padding:54px 0}
+    }
+    

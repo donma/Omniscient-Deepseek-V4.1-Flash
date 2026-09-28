@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LockBit 4.0 變種針對台灣製造業的攻擊手法分析｜AEGIS SEC</title>
+<meta name="description" content="深入分析最新勒索軟體的入侵向量、橫向移動技巧與可執行的防禦建議。">
+<link rel="canonical" href="blog-detail.html">
+<meta property="og:title" content="LockBit 4.0 變種針對台灣製造業的攻擊手法分析｜AEGIS SEC">
+<meta property="og:description" content="深入分析最新勒索軟體的入侵向量、橫向移動技巧與可執行的防禦建議。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "LockBit 4.0 變種針對台灣製造業的攻擊手法分析", "author": {"@type": "Person", "name": "王品涵"}, "datePublished": "2026-03-25", "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"}</script>
+</head>
+<body>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html"><span>A</span>AEGIS SEC</a>
+    <nav class="nav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="services.html">解決方案</a></li>
+        <li><a href="portfolio.html">成功案例</a></li>
+        <li><a href="process.html">服務流程</a></li>
+        <li><a href="blog.html" class="active">威脅情資</a></li>
+        <li><a href="about.html">關於我們</a></li>
+        <li><a href="booking.html">預約評估</a></li>
+        <li><a href="contact.html" class="cta">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於我們</a>
+    <a href="services.html">解決方案</a>
+    <a href="service-detail.html">服務詳情</a>
+    <a href="portfolio.html">成功案例</a>
+    <a href="reviews.html">客戶評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">預約評估</a>
+    <a href="process.html">服務流程</a>
+    <a href="blog.html">威脅情資</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap article">
+    <p class="kicker"><a href="blog.html" style="color:var(--cyan);border-bottom:1px solid">← 回威脅情資</a> ｜ THREAT ANALYSIS</p>
+    <h1 style="font-size:clamp(30px,4.4vw,46px);margin:14px 0 18px">LockBit 4.0 變種針對台灣製造業的攻擊手法分析</h1>
+    <p class="lead" style="color:var(--cyan)">撰文：王品涵（Threat Analyst） ｜ 發佈於 2026 年 3 月 25 日 ｜ 閱讀時間約 8 分鐘</p>
+    <figure><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80" alt="網路安全儀表板與威脅指標"><figcaption>SOC 分析師追蹤 LockBit 4.0 變種的 C2 通訊模式。</figcaption></figure>
+    <h2>攻擊向量觀察</h2>
+    <p>2026 年第一季，我們觀察到 LockBit 4.0 變種針對台灣製造業的攻擊頻率上升 340%。與以往不同的是，攻擊者不再依賴傳統釣魚郵件，而是轉向利用第三方遠端維護工具的憑證外洩，直接存取 OT 與 IT 交界的管理主機。</p>
+    <p>這類攻擊的特徵是「低噪音、高滲透」：攻擊者先潛伏 7–14 天收集網路拓撲與備份策略，再於週末深夜發動加密與資料外洩，藉此提高贖金談判籌碼。</p>
+    <h2>橫向移動技巧</h2>
+    <p>LockBit 4.0 變種大量使用 Living-off-the-Land 技術，濫用合法的系統管理工具（如 PsExec、WMI、PowerShell Remoting）進行橫向移動，降低被傳統防毒攔截的機率。</p>
+    <div class="svc" style="margin:30px 0">
+      <h3>關鍵偵測指標（IoC）</h3>
+      <ul style="color:var(--muted)">
+        <li>異常的 PsExec 服務安裝事件（Event ID 7045）</li>
+        <li>WMI 永久事件訂閱建立（Event ID 5861）</li>
+        <li>大量 SMB 連線至非管理主機的 ADMIN$ 分享</li>
+        <li>vssadmin delete shadows 指令執行紀錄</li>
+      </ul>
+    </div>
+    <h2>防禦建議</h2>
+    <p>針對製造業環境，我們建議優先執行以下三項控制：</p>
+    <ol>
+      <li><strong>OT/IT 邊界微分段：</strong>限制管理主機僅能存取必要 OT 設備，並啟用裝置指紋驗證。</li>
+      <li><strong>遠端維護工具白名單：</strong>僅允許經簽章驗證的維護工具，並啟用會話錄影與雙人覆核。</li>
+      <li><strong>備份離線化：</strong>確保備份儲存與生產網路邏輯隔離，並定期演練還原流程。</li>
+    </ol>
+    <p>若您需要協助評估 OT/IT 邊界風險，歡迎預約免費資安評估，我們將提供客製化的防禦建議。</p>
+    <p style="margin-top:40px;border-top:1px solid var(--line);padding-top:28px"><a class="btn" href="booking.html">預約資安評估</a></p>
+  </div>
+</section>
+<footer>
+  <div class="f-grid">
+    <div>
+      <h5>AEGIS SEC</h5>
+      <p>台灣本土資安顧問與託管偵測應變團隊，專注於企業級威脅獵捕、滲透測試與合規輔導。</p>
+    </div>
+    <div>
+      <h5>解決方案</h5>
+      <a href="services.html">MDR 託管偵測</a>
+      <a href="services.html">滲透測試</a>
+      <a href="services.html">零信任導入</a>
+      <a href="services.html">資安健檢</a>
+    </div>
+    <div>
+      <h5>資源</h5>
+      <a href="blog.html">威脅情資</a>
+      <a href="faq.html">常見問題</a>
+      <a href="process.html">服務流程</a>
+      <a href="booking.html">預約評估</a>
+    </div>
+    <div>
+      <h5>聯絡</h5>
+      <a href="contact.html">聯絡我們</a>
+      <a href="reviews.html">客戶評價</a>
+      <a href="about.html">關於團隊</a>
+    </div>
+  </div>
+  <div class="fmeta">© 2026 AEGIS SEC ｜ 台北市信義區松仁路 100 號 12F ｜ 02-2725-8000</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

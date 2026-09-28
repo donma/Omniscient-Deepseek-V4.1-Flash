@@ -1,0 +1,33 @@
+{
+  "id": "template-012",
+  "name": "Art Gallery",
+  "industryCategory": "活動組織",
+  "industry": [
+    "當代藝術藝廊",
+    "藝術展演空間",
+    "藝術品收藏顧問"
+  ],
+  "colors": [
+    "深灰藝廊"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "展覽室展示",
+    "預約導覽",
+    "收藏購藏流程",
+    "藝術品陳列",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "ArtGallery Schema"
+  ],
+  "layout": [
+    "Left Rail 左側導覽型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

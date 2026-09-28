@@ -1,0 +1,34 @@
+{
+  "id": "template-019",
+  "name": "Home Decor",
+  "industryCategory": "空間生活",
+  "industry": [
+    "軟裝設計顧問",
+    "室內造型工作室",
+    "空間陳列設計"
+  ],
+  "colors": [
+    "暖白自然"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "12 欄可見網格背景",
+    "非對稱 Hero + 側欄數據",
+    "空心巨大章節編號",
+    "無框純排版服務行",
+    "底線式表單",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "InteriorDesign Schema"
+  ],
+  "layout": [
+    "Magazine 雜誌式首頁"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

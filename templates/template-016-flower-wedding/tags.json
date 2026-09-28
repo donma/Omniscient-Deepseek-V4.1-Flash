@@ -1,0 +1,33 @@
+{
+  "id": "template-016",
+  "name": "Flower Wedding",
+  "industryCategory": "創意設計",
+  "industry": [
+    "婚禮花藝工作室",
+    "新娘捧花訂製",
+    "活動場地佈置"
+  ],
+  "colors": [
+    "米白花藝"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "居中雙細線邀請函 Hero",
+    "信封翻蓋方案卡",
+    "旋轉堆疊照片拼貼",
+    "手寫誓詞信紙留言",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "Florist Schema"
+  ],
+  "layout": [
+    "Masonry / Portfolio 作品牆"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

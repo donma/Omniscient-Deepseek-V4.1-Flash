@@ -1,0 +1,33 @@
+{
+  "id": "template-023",
+  "name": "Coworking Space",
+  "industryCategory": "空間生活",
+  "industry": [
+    "共享辦公室",
+    "共同工作空間",
+    "會議室租借平台"
+  ],
+  "colors": [
+    "白灰現代"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "甘特時刻表 Hero（時間軸＋色條）",
+    "即時狀態列與圖例",
+    "費率列車式清單",
+    "會議室預約規則表",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "LocalBusiness Schema"
+  ],
+  "layout": [
+    "Bento Grid 現代資訊版"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

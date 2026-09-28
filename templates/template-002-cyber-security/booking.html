@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>預約資安評估｜AEGIS SEC</title>
+<meta name="description" content="30 分鐘免費資安評估，產出風險摘要與優先修補建議。">
+<link rel="canonical" href="booking.html">
+<meta property="og:title" content="預約資安評估｜AEGIS SEC">
+<meta property="og:description" content="30 分鐘免費資安評估，產出風險摘要與優先修補建議。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html"><span>A</span>AEGIS SEC</a>
+    <nav class="nav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="services.html">解決方案</a></li>
+        <li><a href="portfolio.html">成功案例</a></li>
+        <li><a href="process.html">服務流程</a></li>
+        <li><a href="blog.html">威脅情資</a></li>
+        <li><a href="about.html">關於我們</a></li>
+        <li><a href="booking.html" class="active">預約評估</a></li>
+        <li><a href="contact.html" class="cta">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於我們</a>
+    <a href="services.html">解決方案</a>
+    <a href="service-detail.html">服務詳情</a>
+    <a href="portfolio.html">成功案例</a>
+    <a href="reviews.html">客戶評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">預約評估</a>
+    <a href="process.html">服務流程</a>
+    <a href="blog.html">威脅情資</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <p class="kicker">FREE ASSESSMENT</p>
+    <h1 style="font-size:clamp(32px,5vw,52px);margin:0 0 18px">預約免費資安評估</h1>
+    <p class="lead">填寫以下表單，我們將於一個工作天內與您確認評估時程。</p>
+  </div>
+</section>
+<section class="sec sec-alt">
+  <div class="wrap" style="max-width:860px">
+    <div class="form">
+      <form data-fake="✓ 已收到您的預約需求，我們將於一個工作天內寄送評估確認信。">
+        <div class="grid2">
+          <div><label for="bk-name">聯絡人姓名 *</label><input id="bk-name" type="text" placeholder="王小明" required></div>
+          <div><label for="bk-company">公司名稱 *</label><input id="bk-company" type="text" placeholder="宏達資訊股份有限公司" required></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-email">電子信箱 *</label><input id="bk-email" type="email" placeholder="it@corp.com" required></div>
+          <div><label for="bk-phone">聯絡電話</label><input id="bk-phone" type="tel" placeholder="0912-345-678"></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-size">公司規模</label><select id="bk-size"><option>50 人以下</option><option>50–200 人</option><option>200–500 人</option><option>500–1000 人</option><option>1000 人以上</option></select></div>
+          <div><label for="bk-type">評估類型</label><select id="bk-type"><option>免費資安健檢（30 分鐘）</option><option>MDR 導入評估</option><option>滲透測試規劃</option><option>零信任架構諮詢</option><option>ISO 27001 輔導</option></select></div>
+        </div>
+        <div><label for="bk-note">目前面臨的資安挑戰或問題</label><textarea id="bk-note" rows="4" placeholder="例：近期收到大量釣魚郵件、準備導入雲端、稽核即將到期…"></textarea></div>
+        <button class="btn" type="submit">送出預約</button>
+        <p class="msg" aria-live="polite" style="font-size:16px;text-align:center"></p>
+      </form>
+    </div>
+    <div style="margin-top:26px;color:var(--muted);font-size:14px;line-height:1.9">
+      <p>※ 免費評估為線上會議形式，約 30 分鐘，產出高階風險摘要與優先修補建議。<br>
+      ※ 若需簽署 NDA 或提供系統架構圖，請於備註欄註明，我們將提前準備。</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="f-grid">
+    <div>
+      <h5>AEGIS SEC</h5>
+      <p>台灣本土資安顧問與託管偵測應變團隊，專注於企業級威脅獵捕、滲透測試與合規輔導。</p>
+    </div>
+    <div>
+      <h5>解決方案</h5>
+      <a href="services.html">MDR 託管偵測</a>
+      <a href="services.html">滲透測試</a>
+      <a href="services.html">零信任導入</a>
+      <a href="services.html">資安健檢</a>
+    </div>
+    <div>
+      <h5>資源</h5>
+      <a href="blog.html">威脅情資</a>
+      <a href="faq.html">常見問題</a>
+      <a href="process.html">服務流程</a>
+      <a href="booking.html">預約評估</a>
+    </div>
+    <div>
+      <h5>聯絡</h5>
+      <a href="contact.html">聯絡我們</a>
+      <a href="reviews.html">客戶評價</a>
+      <a href="about.html">關於團隊</a>
+    </div>
+  </div>
+  <div class="fmeta">© 2026 AEGIS SEC ｜ 台北市信義區松仁路 100 號 12F ｜ 02-2725-8000</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

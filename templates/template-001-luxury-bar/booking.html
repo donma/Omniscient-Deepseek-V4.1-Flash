@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>線上預約訂位｜NOIR 1888 台北大安</title>
+<meta name="description" content="24 小時線上即時預約吧台席、沙發桌席或包廂，確認信將以簡訊即時發送。">
+<link rel="canonical" href="booking.html">
+<meta property="og:title" content="線上預約訂位｜NOIR 1888 台北大安">
+<meta property="og:description" content="24 小時線上即時預約吧台席、沙發桌席或包廂，確認信將以簡訊即時發送。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<div class="topline">訂位專線 02-2755-0188 ｜ 每日 17:00 – 02:00 ｜ 台北市大安區復興南路一段 88 號 B1</div>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html">NOIR 1888<small>LOUNGE BAR</small></a>
+    <nav class="nav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">品牌故事</a></li>
+        <li><a href="services.html">調飲酒單</a></li>
+        <li><a href="portfolio.html">空間氛圍</a></li>
+        <li><a href="process.html">訂位須知</a></li>
+        <li><a href="blog.html">夜間誌</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">首頁</a>
+    <a href="about.html">品牌故事</a>
+    <a href="services.html">調飲酒單</a>
+    <a href="service-detail.html">招牌調飲</a>
+    <a href="portfolio.html">空間氛圍</a>
+    <a href="reviews.html">酒客評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">線上訂位</a>
+    <a href="process.html">訂位須知</a>
+    <a href="blog.html">夜間誌</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <p class="kicker">RESERVATION</p>
+    <h1 style="font-size:clamp(32px,5vw,56px);margin:0 0 20px">線上即時訂位</h1>
+    <p class="lead">請填寫以下資訊，完成送出後我們將立即發送預約確認簡訊至您的手機。</p>
+  </div>
+</section>
+<section class="sec sec-alt">
+  <div class="wrap" style="max-width:860px">
+    <div class="form">
+      <form data-fake="✓ 訂位需求已成功送出！訂位編號 #NR-8821，我們已發送確認簡訊至您的手機，期待今晚為您開門。">
+        <div class="grid2">
+          <div><label for="bk-date">預約日期 DATE *</label><input id="bk-date" type="date" required></div>
+          <div><label for="bk-time">預約時間 TIME *</label><select id="bk-time"><option>17:30</option><option>19:00</option><option>20:30</option><option>22:00</option><option>23:30</option><option>00:30</option></select></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-guests">人數 GUESTS *</label><select id="bk-guests"><option>1 位（推薦吧台）</option><option selected>2 位（吧台或小圓桌）</option><option>3 – 4 位（沙發方桌）</option><option>5 – 6 位（沙發長桌）</option><option>7 – 12 位（絲絨大包廂）</option></select></div>
+          <div><label for="bk-area">偏好座位 SEATING AREA</label><select id="bk-area"><option>吧台區（面對調酒師）</option><option>一般沙發散座</option><option>靠窗半私密圓桌</option><option>獨立包廂（需符合低消）</option></select></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-name">訂位大名 NAME *</label><input id="bk-name" type="text" placeholder="王小明 先生/小姐" required></div>
+          <div><label for="bk-phone">聯絡電話 PHONE *</label><input id="bk-phone" type="tel" placeholder="0912-345-678" required></div>
+        </div>
+        <div><label for="bk-email">電子信箱 EMAIL</label><input id="bk-email" type="email" placeholder="name@example.com"></div>
+        <div><label for="bk-note">特殊需求或紀念日慶祝 SPECIAL REQUESTS</label><textarea id="bk-note" rows="4" placeholder="例：慶祝結婚五週年、對堅果過敏、希望安靜座位…"></textarea></div>
+        <button class="btn" type="submit">確認並送出訂位</button>
+        <p class="msg" aria-live="polite" style="font-size:16px;text-align:center"></p>
+      </form>
+    </div>
+    <div style="margin-top:30px;color:var(--muted);font-size:14px;line-height:1.9">
+      <p>※ 訂位保留 15 分鐘，逾時將釋出給現場候位賓客。<br>
+      ※ 若需預約今日兩小時內座位，請直接致電門市 02-2755-0188 洽詢即時空位。<br>
+      ※ 八人以上包廂訂位，服務專員將於送出後 24 小時內與您電話確認菜單與低消規範。</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="wrap">
+    <p class="f-emblem">NOIR 1888</p>
+    <ul class="fnav">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="about.html">品牌故事</a></li>
+      <li><a href="services.html">調飲酒單</a></li>
+      <li><a href="portfolio.html">空間氛圍</a></li>
+      <li><a href="reviews.html">酒客評價</a></li>
+      <li><a href="faq.html">常見問題</a></li>
+      <li><a href="booking.html">線上訂位</a></li>
+      <li><a href="blog.html">夜間誌</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul>
+    <p style="color:#b3a78c;font-size:14px">台北市大安區復興南路一段 88 號 B1 ｜ 02-2755-0188 ｜ LINE @noir1888</p>
+  </div>
+  <div class="fmeta">© 2026 NOIR 1888 Lounge Bar ｜ 圖片為設計示意，正式交付前請替換為客戶自有或授權圖片</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聯絡我們｜MAISON ÉCLAT</title>
+<meta name="description" content="門市地址、營業時間、交通資訊與預約試穿表單。">
+<link rel="canonical" href="contact.html">
+<meta property="og:title" content="聯絡我們｜MAISON ÉCLAT">
+<meta property="og:description" content="門市地址、營業時間、交通資訊與預約試穿表單。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html">MAISON ÉCLAT<small>FASHION BOUTIQUE</small></a>
+    <nav class="nav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">品牌故事</a></li>
+        <li><a href="services.html">系列作品</a></li>
+        <li><a href="portfolio.html">Lookbook</a></li>
+        <li><a href="blog.html">風格誌</a></li>
+        <li><a href="contact.html" class="active">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">首頁</a>
+    <a href="about.html">品牌故事</a>
+    <a href="services.html">系列作品</a>
+    <a href="service-detail.html">單品詳情</a>
+    <a href="portfolio.html">Lookbook</a>
+    <a href="reviews.html">媒體評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">預約試穿</a>
+    <a href="process.html">購物流程</a>
+    <a href="blog.html">風格誌</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <p class="kicker">CONTACT</p>
+    <h1 style="font-size:clamp(32px,5vw,52px);margin:0 0 18px">聯絡我們</h1>
+    <p class="lead">歡迎預約試穿、訂製諮詢或任何關於材質與剪裁的問題。</p>
+  </div>
+</section>
+<section class="sec sec-alt">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start">
+    <div>
+      <div class="info" style="display:grid;gap:16px">
+        <div style="border:1px solid var(--line);padding:18px 22px;background:var(--panel)"><b style="color:var(--acc);display:block;font-size:12px;letter-spacing:.2em">門市地址</b><span>台北市信義區松壽路 12 號 1F</span></div>
+        <div style="border:1px solid var(--line);padding:18px 22px;background:var(--panel)"><b style="color:var(--acc);display:block;font-size:12px;letter-spacing:.2em">營業時間</b><span>週一至週日 11:00 – 20:00（週二公休）</span></div>
+        <div style="border:1px solid var(--line);padding:18px 22px;background:var(--panel)"><b style="color:var(--acc);display:block;font-size:12px;letter-spacing:.2em">電話與 LINE</b><span>02-2720-1188 ｜ LINE：@maison_eclat</span></div>
+        <div style="border:1px solid var(--line);padding:18px 22px;background:var(--panel)"><b style="color:var(--acc);display:block;font-size:12px;letter-spacing:.2em">交通資訊</b><span>捷運象山站 1 號出口步行約 6 分鐘，或捷運市政府站 3 號出口步行約 8 分鐘。</span></div>
+      </div>
+      <div style="margin-top:20px"><a class="btn" href="booking.html" style="width:100%;text-align:center">預約試穿</a></div>
+    </div>
+    <div class="form">
+      <h3 style="margin-top:0;color:var(--acc)">預約與洽詢</h3>
+      <form data-fake="感謝您的來訊！我們將於一個工作天內回覆。">
+        <div><label for="ct-name">姓名 *</label><input id="ct-name" type="text" placeholder="王小明" required></div>
+        <div><label for="ct-phone">聯絡電話 *</label><input id="ct-phone" type="tel" placeholder="0912-345-678" required></div>
+        <div><label for="ct-email">電子信箱</label><input id="ct-email" type="email" placeholder="name@example.com"></div>
+        <div><label for="ct-type">洽詢類型</label><select id="ct-type"><option>預約試穿</option><option>訂製諮詢</option><option>修改服務</option><option>媒體合作</option><option>其他</option></select></div>
+        <div><label for="ct-msg">訊息內容</label><textarea id="ct-msg" rows="4" placeholder="請簡述您的需求…"></textarea></div>
+        <button class="btn" type="submit">送出訊息</button>
+        <p class="msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="f-grid">
+    <div>
+      <h5>MAISON ÉCLAT</h5>
+      <p>以黑白灰為語言的精品服飾選品店，專注於剪裁、材質與時間的對話。</p>
+    </div>
+    <div>
+      <h5>系列</h5>
+      <a href="services.html">當季系列</a>
+      <a href="services.html">經典款</a>
+      <a href="services.html">訂製服務</a>
+    </div>
+    <div>
+      <h5>資源</h5>
+      <a href="blog.html">風格誌</a>
+      <a href="faq.html">常見問題</a>
+      <a href="process.html">購物流程</a>
+    </div>
+    <div>
+      <h5>聯絡</h5>
+      <a href="contact.html">聯絡我們</a>
+      <a href="reviews.html">媒體評價</a>
+      <a href="booking.html">預約試穿</a>
+    </div>
+  </div>
+  <div class="fmeta">© 2026 MAISON ÉCLAT ｜ 台北市信義區松壽路 12 號 1F ｜ 02-2720-1188</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

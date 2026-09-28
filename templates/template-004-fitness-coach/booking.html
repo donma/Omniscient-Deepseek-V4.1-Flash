@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>預約體驗課｜IRONEDGE</title>
+<meta name="description" content="預約首次體驗課或方案諮詢，每週限 6 名。">
+<link rel="canonical" href="booking.html">
+<meta property="og:title" content="預約體驗課｜IRONEDGE">
+<meta property="og:description" content="預約首次體驗課或方案諮詢，每週限 6 名。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html">IRON<em>EDGE</em></a>
+    <nav class="nav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="about.html">關於教練</a></li>
+        <li><a href="services.html">訓練方案</a></li>
+        <li><a href="portfolio.html">成果展示</a></li>
+        <li><a href="process.html">訓練流程</a></li>
+        <li><a href="blog.html">訓練誌</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+        <li><a href="booking.html" class="cta">預約體驗</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於教練</a>
+    <a href="services.html">訓練方案</a>
+    <a href="service-detail.html">方案詳情</a>
+    <a href="portfolio.html">成果展示</a>
+    <a href="reviews.html">學員評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">預約體驗</a>
+    <a href="process.html">訓練流程</a>
+    <a href="blog.html">訓練誌</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <p class="kicker">BOOK A SESSION</p>
+    <h1 style="font-size:clamp(34px,5vw,56px);margin:0 0 18px">預約體驗課</h1>
+    <p class="lead">首次體驗課 $800（原價 $1,800），含動作篩選、體組成測量與完整訓練一堂。</p>
+  </div>
+</section>
+<section class="sec sec-alt">
+  <div class="wrap" style="max-width:860px">
+    <div class="form">
+      <form data-fake="✓ 已收到預約！我們將於 12 小時內以電話或 LINE 與您確認時段（每週限 6 名）。">
+        <div class="grid2">
+          <div><label for="bk-name">姓名 *</label><input id="bk-name" type="text" placeholder="王小明" required></div>
+          <div><label for="bk-phone">聯絡電話 *</label><input id="bk-phone" type="tel" placeholder="0912-345-678" required></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-date">希望日期 *</label><input id="bk-date" type="date" required></div>
+          <div><label for="bk-time">希望時段 *</label><select id="bk-time"><option>平日 10:00–12:00</option><option>平日 14:00–17:00</option><option>平日 19:00–21:30</option><option>週六 09:00–12:00</option></select></div>
+        </div>
+        <div class="grid2">
+          <div><label for="bk-goal">訓練目標</label><select id="bk-goal"><option>減脂與體態改善</option><option>增肌與力量提升</option><option>產後核心重建</option><option>運動表現提升</option><option>傷後回歸訓練</option></select></div>
+          <div><label for="bk-exp">訓練經驗</label><select id="bk-exp"><option>完全沒經驗</option><option>自己練 3 個月內</option><option>自己練 3 個月以上</option><option>曾有私教課經驗</option></select></div>
+        </div>
+        <div><label for="bk-note">身體狀況或特殊需求</label><textarea id="bk-note" rows="4" placeholder="例：長期腰酸、曾做過前十字韌帶手術、時間只能晚上…"></textarea></div>
+        <button class="btn btn-lime" type="submit">送出預約</button>
+        <p class="msg" aria-live="polite" style="font-size:16px;text-align:center"></p>
+      </form>
+    </div>
+    <div style="margin-top:26px;color:var(--muted);font-size:14px;line-height:1.9">
+      <p>※ 體驗課時程以客服確認為準，每週額滿即停止受理。<br>
+      ※ 請穿著方便活動的服裝與室內運動鞋，工作室備有飲用水與簡易更衣空間。<br>
+      ※ 若有急性損傷或手術後復原中，請於備註欄說明，我們會安排合適的評估方式。</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="f-grid">
+    <div>
+      <h5>IRONEDGE</h5>
+      <p>台北大安私人健身訓練工作室，提供一對一與小班制肌力、體態與體能訓練。</p>
+    </div>
+    <div>
+      <h5>方案</h5>
+      <a href="services.html">一對一私教</a>
+      <a href="services.html">小班訓練</a>
+      <a href="services.html">體態雕塑</a>
+      <a href="services.html">運動表現</a>
+    </div>
+    <div>
+      <h5>資源</h5>
+      <a href="blog.html">訓練誌</a>
+      <a href="faq.html">常見問題</a>
+      <a href="process.html">訓練流程</a>
+    </div>
+    <div>
+      <h5>聯絡</h5>
+      <a href="contact.html">聯絡我們</a>
+      <a href="reviews.html">學員評價</a>
+      <a href="booking.html">預約體驗</a>
+    </div>
+  </div>
+  <div class="fmeta">© 2026 IRONEDGE Personal Training ｜ 台北市大安區忠孝東路四段 181 巷 7 號 2F ｜ 02-2778-3600</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

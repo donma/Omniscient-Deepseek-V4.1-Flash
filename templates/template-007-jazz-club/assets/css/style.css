@@ -1,0 +1,141 @@
+/* T007 Jazz Club — 1950s 黑膠唱片與打孔門票風格  style.css */
+:root{
+  --bg:#070503; --vinyl:#120e0a; --panel:#19140f; --line:#35271a;
+  --brass:#d99b32; --brass-glow:#fadb82; --crimson:#9e2a2b; --paper:#f5ebd7;
+  --txt:#f2ece1; --muted:#9e8e7c;
+  --display:"Noto Serif TC",serif; --mono:"Courier New",monospace; --sans:"Noto Sans TC",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.75;background-image:radial-gradient(#1a140d 1px, transparent 1px);background-size:24px 24px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--display);color:var(--txt);letter-spacing:.04em}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.38em;color:var(--brass);text-transform:uppercase;margin-bottom:10px}
+.sec{padding:88px 0}
+.sec-alt{background:var(--vinyl);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.lead{color:var(--muted);max-width:620px}
+.btn{display:inline-block;padding:14px 34px;background:var(--brass);color:#070503;font-family:var(--mono);font-weight:900;letter-spacing:.14em;border-radius:2px;border:1px solid var(--brass);transition:.2s;text-transform:uppercase}
+.btn:hover{background:var(--brass-glow);color:#000;box-shadow:0 0 25px rgba(217,155,50,.35)}
+.btn-ghost{background:transparent;color:var(--brass);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--brass);color:#fff}
+
+/* Header: 復古唱片行標頭 + 旋轉黑膠造型徽章 */
+header.hd{position:sticky;top:0;z-index:60;background:rgba(7,5,3,.94);backdrop-filter:blur(10px);border-bottom:2px solid var(--brass)}
+.hd-in{max-width:1220px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:14px}
+.vinyl-disc{width:38px;height:38px;border-radius:50%;background:repeating-radial-gradient(#1a140d,#1a140d 2px,#070503 3px,#070503 4px);border:1px solid var(--brass);position:relative;display:grid;place-items:center}
+.vinyl-disc::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--brass)}
+.brand-name{font-family:var(--display);font-size:22px;letter-spacing:.18em;color:var(--brass-glow)}
+.brand-name small{display:block;font-size:9.5px;letter-spacing:.45em;color:var(--muted);font-family:var(--mono)}
+.nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+.nav a{font-size:14.5px;color:var(--txt);padding-bottom:4px;border-bottom:2px solid transparent}
+.nav a:hover{color:var(--brass-glow);border-color:var(--brass)}
+.nav a.active{color:var(--brass-glow);border-color:var(--brass)}
+.burger{display:none;width:44px;height:44px;background:transparent;border:1px solid var(--line);color:var(--brass);font-size:20px}
+.drawer{display:none;background:#0d0a06;border-bottom:1px solid var(--line);padding:10px 24px 18px}
+.drawer.open{display:block}
+.drawer a{display:block;padding:13px 4px;color:var(--txt);border-bottom:1px solid var(--line);font-size:16px}
+.drawer a:last-child{border-bottom:none}
+
+/* Hero: 1950 爵士黑膠唱片封套佈局 */
+.hero{padding:80px 0 60px}
+.jacket{background:#110d09;border:2px solid var(--line);padding:44px;position:relative;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.jacket-strip{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid var(--brass);padding-bottom:16px;margin-bottom:34px;font-family:var(--mono);font-size:12px;color:var(--brass);letter-spacing:.25em}
+.jacket-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.record-art{position:relative;aspect-ratio:1/1;background:#000;border:1px solid var(--line);overflow:hidden}
+.record-art img{width:100%;height:100%;object-fit:cover;filter:sepia(30%) contrast(1.15)}
+.record-art .groove-overlay{position:absolute;inset:0;background:repeating-radial-gradient(circle at 80% 80%,transparent 0,transparent 4px,rgba(0,0,0,.3) 5px,rgba(0,0,0,.3) 6px);pointer-events:none}
+.jacket-copy h1{font-size:clamp(40px,5.8vw,74px);line-height:1.06;margin:0 0 20px;color:var(--brass-glow)}
+.jacket-copy h1 em{font-style:italic;color:#fff;display:block}
+.jacket-copy p{color:var(--muted);font-size:16.5px;max-width:500px}
+.jacket-cta{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* 打孔式紙質票券列表 (Ticket Punch Cards) */
+.tickets{display:grid;gap:18px}
+.ticket{display:grid;grid-template-columns:140px 1fr 180px;background:var(--panel);border:1px dashed var(--brass);position:relative;overflow:hidden}
+.ticket::before,.ticket::after{content:"";position:absolute;top:50%;width:20px;height:20px;border-radius:50%;background:var(--bg);transform:translateY(-50%)}
+.ticket::before{left:-10px}
+.ticket::after{right:-10px}
+.ticket-date{background:#0e0a07;border-right:1px dashed var(--line);padding:26px 20px;text-align:center;display:flex;flex-direction:column;justify-content:center}
+.ticket-date .d{font-family:var(--display);font-size:36px;color:var(--brass-glow);line-height:1}
+.ticket-date .mo{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.2em;margin-top:4px}
+.ticket-main{padding:24px 30px}
+.ticket-main .genre{font-family:var(--mono);font-size:11.5px;color:var(--crimson);letter-spacing:.2em;font-weight:700}
+.ticket-main h3{margin:6px 0 8px;font-size:22px;color:#fff}
+.ticket-main p{margin:0;color:var(--muted);font-size:14px}
+.ticket-act{padding:24px;border-left:1px dashed var(--line);display:flex;flex-direction:column;justify-content:center;align-items:center;background:#140f0b}
+.ticket-act .seat{font-family:var(--mono);font-size:13px;color:var(--brass);margin-bottom:10px}
+
+/* 復古節目海報牆 */
+.posters{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.poster-card{background:#0a0705;border:1px solid var(--line);padding:16px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.poster-fig{aspect-ratio:3/4;overflow:hidden;background:#000;border:1px solid var(--line);position:relative}
+.poster-fig img{width:100%;height:100%;object-fit:cover;filter:sepia(25%) contrast(1.1);transition:.4s}
+.poster-card:hover .poster-fig img{transform:scale(1.05);filter:sepia(0%)}
+.poster-info{padding:16px 4px 6px}
+.poster-info .cat{font-family:var(--mono);font-size:11px;color:var(--brass);letter-spacing:.2em}
+.poster-info h4{margin:6px 0;font-size:18px;color:#fff}
+.poster-info p{margin:0;color:var(--muted);font-size:13.5px}
+
+/* 樂評摘錄 */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.quote-box{background:var(--panel);border:1px solid var(--line);padding:24px;position:relative}
+.quote-box p{font-family:var(--display);color:#f0e8db;font-size:17px;margin:0 0 12px;line-height:1.6}
+.quote-box span{font-family:var(--mono);font-size:12.5px;color:var(--brass)}
+
+/* 表單與表格 */
+.form{background:var(--panel);border:1px solid var(--line);padding:34px;position:relative}
+.form::before{content:"RESERVATION TICKET";position:absolute;top:12px;right:20px;font-family:var(--mono);font-size:11px;color:var(--line);letter-spacing:.2em}
+.form label{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;color:var(--brass);margin:16px 0 6px}
+.form input,.form select,.form textarea{width:100%;background:#090604;border:1px solid var(--line);color:var(--txt);padding:12px 14px;border-radius:2px;font-family:var(--sans)}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--brass)}
+.form .btn{margin-top:22px;width:100%;text-align:center}
+.form .msg{color:var(--brass-glow);margin-top:14px;font-family:var(--mono)}
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:14px 16px;text-align:left}
+.tbl th{color:var(--brass);font-family:var(--mono);font-size:13px;letter-spacing:.12em}
+.tbl td{color:var(--muted)}
+.tbl tr:hover td{color:var(--txt);background:#130e09}
+
+/* 文章卡片 */
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.post{background:var(--panel);border:1px solid var(--line);overflow:hidden}
+.post img{height:200px;width:100%;object-fit:cover;filter:sepia(20%)}
+.post .body{padding:20px}
+.post .date{font-family:var(--mono);font-size:12px;color:var(--brass);letter-spacing:.15em}
+.post h3{margin:8px 0;font-size:18px;color:#fff}
+.post p{color:var(--muted);font-size:14px;margin:0 0 12px}
+.post a{color:var(--brass-glow);font-size:14px;border-bottom:1px solid var(--brass)}
+.article{max-width:800px;margin:0 auto}
+.article h2{color:var(--brass-glow);margin-top:40px}
+.article p,.article li{color:#d8cec2}
+.article figure{margin:28px 0}
+.article figcaption{color:var(--muted);font-size:13px;margin-top:8px;font-family:var(--mono)}
+
+/* 頁尾銅管銘板風格 */
+footer{background:#040302;border-top:2px solid var(--brass);padding:60px 0 0;text-align:center}
+.f-plate{display:inline-block;border:1px solid var(--brass);padding:8px 28px;font-family:var(--mono);font-size:12px;color:var(--brass);letter-spacing:.3em;margin-bottom:20px}
+.f-title{font-family:var(--display);font-size:32px;color:var(--brass-glow);margin:0 0 10px}
+footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:24px 0 20px;padding:0;list-style:none}
+footer .fnav a{color:var(--muted);font-size:14px}
+footer .fnav a:hover{color:var(--brass-glow)}
+.fmeta{border-top:1px solid var(--line);padding:20px;color:#5a4d3f;font-size:12.5px;font-family:var(--mono)}
+.totop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:2px;background:var(--brass);color:#070503;border:none;font-size:18px;display:none;z-index:70;font-weight:900}
+.totop.show{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:36px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+@media(max-width:960px){
+  .jacket-grid,.grid2,.posters{grid-template-columns:1fr}
+  .ticket{grid-template-columns:1fr}
+  .ticket-date{border-right:none;border-bottom:1px dashed var(--line);padding:16px}
+  .ticket-act{border-left:none;border-top:1px dashed var(--line)}
+  .nav{display:none}
+  .burger{display:block}
+}
+@media(max-width:640px){
+  .jacket{padding:24px}
+  .sec{padding:56px 0}
+}

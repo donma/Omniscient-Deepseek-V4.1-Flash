@@ -1,0 +1,120 @@
+/* T015 Brunch Cafe — Le Matin Gazette Style */
+:root{
+  --bg:#fbf8f1; --bg2:#f3ede0; --panel:#ffffff; --line:#d8ccb6;
+  --ink:#231c15; --burgundy:#8a2824; --caramel:#a36829; --muted:#685a4d;
+  --serif:"Noto Serif TC",serif; --mono:"Courier New",monospace; --sans:"Noto Sans TC",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.8}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);letter-spacing:.02em}
+:focus-visible{outline:2px solid var(--burgundy);outline-offset:3px}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.32em;color:var(--burgundy);text-transform:uppercase;margin-bottom:8px}
+.sec{padding:80px 0}
+.sec-alt{background:var(--bg2);border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+.lead{color:var(--muted);max-width:620px}
+.btn{display:inline-block;padding:12px 28px;border:2px solid var(--ink);color:#fff;background:var(--ink);font-family:var(--mono);font-weight:700;letter-spacing:.1em;border-radius:0;transition:.2s;text-transform:uppercase}
+.btn:hover{background:var(--burgundy);border-color:var(--burgundy);color:#fff}
+.btn-ghost{background:transparent;color:var(--ink)}
+.btn-ghost:hover{background:var(--ink);color:#fff}
+
+/* 法式早報雙線報頭 (Masthead Double Border) */
+header.hd{background:var(--bg);border-bottom:4px double var(--ink);padding-top:16px}
+.gazette-bar{border-bottom:1px solid var(--line);padding-bottom:8px;font-family:var(--mono);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between}
+.gazette-bar b{color:var(--ink)}
+.masthead-title{text-align:center;padding:20px 0 16px}
+.masthead-title h1{font-family:var(--serif);font-size:clamp(44px,6vw,78px);margin:0;letter-spacing:.12em;line-height:1;color:var(--ink)}
+.masthead-title p{font-family:var(--mono);font-size:12px;letter-spacing:.45em;color:var(--muted);margin:8px 0 0;text-transform:uppercase}
+.mast-nav{border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-top:14px}
+.mast-nav ul{display:flex;justify-content:center;gap:32px;list-style:none;margin:0;padding:10px 0;flex-wrap:wrap}
+.mast-nav a{font-family:var(--serif);font-size:15px;color:var(--ink);font-weight:700;padding-bottom:3px;border-bottom:2px solid transparent}
+.mast-nav a:hover{color:var(--burgundy);border-color:var(--burgundy)}
+.mast-nav a.active{color:var(--burgundy);border-color:var(--burgundy)}
+.burger{display:none;width:44px;height:44px;margin:10px auto;background:transparent;border:2px solid var(--ink);font-size:20px}
+.drawer{display:none;background:var(--bg2);border-bottom:2px solid var(--ink);padding:10px 24px 18px}
+.drawer.open{display:block}
+.drawer a{display:block;padding:12px 4px;color:var(--ink);border-bottom:1px solid var(--line);font-size:16px;font-family:var(--serif);font-weight:700}
+
+/* 三欄報紙社論 Hero (Newspaper Editorial Grid) */
+.gazette-hero{padding:50px 0 60px;border-bottom:1px solid var(--line)}
+.newspaper-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start}
+.main-story h2{font-size:clamp(34px,4.5vw,56px);line-height:1.15;margin:0 0 16px}
+.main-story .byline{font-family:var(--mono);font-size:12px;color:var(--burgundy);letter-spacing:.15em;border-bottom:1px solid var(--line);padding-bottom:12px;margin-bottom:18px}
+.dropcap::first-letter{float:left;font-family:var(--serif);font-size:72px;line-height:.85;padding:8px 12px 0 0;color:var(--burgundy);font-weight:900}
+.main-story p{text-align:justify;color:var(--muted);font-size:16px}
+.story-fig img{width:100%;height:380px;object-fit:cover;border:1px solid var(--ink);filter:sepia(12%)}
+.story-fig .cap{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:8px}
+
+/* 外帶點餐小票單據風格 (Receipt Slip) */
+.receipt-wrap{background:#fff;border:1px solid var(--line);box-shadow:0 14px 40px rgba(0,0,0,.06);padding:32px 28px;position:relative}
+.receipt-wrap::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:10px;background:radial-gradient(circle,transparent,transparent 5px,#fff 5px,#fff 10px);background-size:20px 20px}
+.receipt-header{text-align:center;border-bottom:2px dashed var(--line);padding-bottom:18px;margin-bottom:20px;font-family:var(--mono)}
+.receipt-header h3{margin:0 0 4px;font-size:20px}
+.receipt-items{display:grid;gap:12px;font-family:var(--mono);font-size:13.5px}
+.r-item{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);padding-bottom:6px}
+.r-item b{color:var(--burgundy)}
+
+/* 報紙分類四欄版面 */
+.columns-4{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.col-card{border-top:3px solid var(--ink);padding-top:14px}
+.col-card .tag{font-family:var(--mono);font-size:11px;color:var(--burgundy);letter-spacing:.2em}
+.col-card h4{margin:8px 0 6px;font-size:18px}
+.col-card p{color:var(--muted);font-size:14px;margin:0}
+
+/* 社論引言 */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.quote-box{border:1px solid var(--ink);padding:24px;background:#fff;position:relative}
+.quote-box::before{content:"“";font-family:var(--serif);font-size:60px;position:absolute;top:4px;left:14px;color:rgba(138,40,36,.15);line-height:1}
+.quote-box p{font-family:var(--serif);font-size:17px;color:var(--ink);position:relative;margin:0 0 10px}
+.quote-box span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+/* 表單與表格 */
+.form{background:#fff;border:2px solid var(--ink);padding:32px;box-shadow:8px 8px 0 var(--ink)}
+.form label{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--ink);margin:16px 0 6px}
+.form input,.form select,.form textarea{width:100%;background:var(--bg);border:1px solid var(--ink);color:var(--ink);padding:12px 14px;border-radius:0;font-family:var(--sans)}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--burgundy);outline:none}
+.form .btn{margin-top:22px;width:100%;text-align:center}
+.form .msg{color:var(--burgundy);margin-top:14px;font-family:var(--mono);text-align:center}
+.tbl{width:100%;border-collapse:collapse;font-size:14.5px;font-family:var(--sans)}
+.tbl th,.tbl td{border-bottom:1px solid var(--line);padding:13px 16px;text-align:left}
+.tbl th{font-family:var(--mono);font-size:12px;color:var(--burgundy);letter-spacing:.1em;border-bottom:2px solid var(--ink)}
+.tbl td b{color:var(--ink)}
+
+/* 文章 */
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.post{background:#fff;border:1px solid var(--ink);overflow:hidden}
+.post img{height:200px;width:100%;object-fit:cover;filter:sepia(10%)}
+.post .body{padding:20px}
+.post .date{font-family:var(--mono);font-size:11.5px;color:var(--burgundy);letter-spacing:.15em}
+.post h3{margin:8px 0;font-size:19px}
+.post p{color:var(--muted);font-size:14px;margin:0 0 12px}
+.post a{color:var(--burgundy);font-family:var(--mono);font-size:13.5px;border-bottom:1px solid var(--burgundy)}
+.article{max-width:780px;margin:0 auto}
+.article h2{margin-top:40px;color:var(--burgundy)}
+.article p,.article li{color:#3d3329}
+.article figure{margin:28px 0}
+.article figcaption{color:var(--muted);font-size:13px;margin-top:8px;font-family:var(--mono)}
+.grid2{display:grid;grid-template-columns:1.2fr .8fr;gap:40px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+/* 報尾版權 (Colophon Footer) */
+footer{background:var(--bg);border-top:4px double var(--ink);padding:50px 0 0;text-align:center}
+footer .logo{font-family:var(--serif);font-size:36px;color:var(--ink);letter-spacing:.12em}
+footer .fnav{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:22px 0 18px;padding:0;list-style:none}
+footer .fnav a{color:var(--ink);font-family:var(--serif);font-size:14px;font-weight:700}
+footer .fnav a:hover{color:var(--burgundy)}
+.fmeta{border-top:1px solid var(--ink);padding:20px;color:var(--muted);font-size:12.5px;font-family:var(--mono)}
+.totop{position:fixed;right:22px;bottom:22px;width:44px;height:44px;background:var(--ink);color:#fff;border:none;font-size:18px;display:none;z-index:70}
+.totop.show{display:block}
+
+@media(max-width:960px){
+  .newspaper-grid,.grid2,.columns-4{grid-template-columns:1fr}
+  .mast-nav{display:none}
+  .burger{display:block}
+}
+@media(max-width:640px){
+  .grid3{grid-template-columns:1fr}
+  .sec{padding:54px 0}
+}

@@ -1,0 +1,33 @@
+{
+  "id": "template-015",
+  "name": "Brunch Cafe",
+  "industryCategory": "餐飲甜點",
+  "industry": [
+    "早午餐烘焙坊",
+    "法式咖啡館",
+    "獨立麵包店"
+  ],
+  "colors": [
+    "明亮奶油"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "法式早報雙線報頭",
+    "三欄社論排版",
+    "外帶小票點餐單據",
+    "副刊隨筆",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "CafeOrCoffeeShop Schema"
+  ],
+  "layout": [
+    "Magazine 雜誌式首頁"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

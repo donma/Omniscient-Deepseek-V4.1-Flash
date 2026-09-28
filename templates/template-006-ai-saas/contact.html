@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>聯絡我們｜NEURA FLOW</title>
+<meta name="description" content="業務洽詢、媒體採訪與技術支援的聯絡管道。">
+<link rel="canonical" href="contact.html">
+<meta property="og:title" content="聯絡我們｜NEURA FLOW">
+<meta property="og:description" content="業務洽詢、媒體採訪與技術支援的聯絡管道。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html"><span class="mark">◈</span>NEURA FLOW</a>
+    <nav class="pillnav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="services.html">產品功能</a></li>
+        <li><a href="portfolio.html">成功案例</a></li>
+        <li><a href="process.html">導入流程</a></li>
+        <li><a href="blog.html">產品誌</a></li>
+        <li><a href="contact.html" class="active">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="booking.html">免費試用</a>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於我們</a>
+    <a href="services.html">產品功能</a>
+    <a href="service-detail.html">功能詳情</a>
+    <a href="portfolio.html">成功案例</a>
+    <a href="reviews.html">客戶評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">免費試用</a>
+    <a href="process.html">導入流程</a>
+    <a href="blog.html">產品誌</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap">
+    <p class="kicker">CONTACT</p>
+    <h1 style="font-size:clamp(34px,5vw,56px);margin:0 0 18px">聯絡我們</h1>
+    <p class="lead">產品、企業方案、媒體或技術支援，皆有專人窗口。</p>
+  </div>
+</section>
+<section class="sec sec-alt">
+  <div class="wrap grid2">
+    <div>
+      <div style="display:grid;gap:16px">
+        <div style="border:1px solid var(--line);border-left:4px solid var(--v1);border-radius:14px;padding:18px 22px;background:var(--panel)"><b style="color:var(--v2);display:block;font-size:12.5px;letter-spacing:.16em">公司地址</b><span>台北市南港區忠孝東路六段 45 號 3F</span></div>
+        <div style="border:1px solid var(--line);border-left:4px solid var(--v1);border-radius:14px;padding:18px 22px;background:var(--panel)"><b style="color:var(--v2);display:block;font-size:12.5px;letter-spacing:.16em">業務洽詢</b><span>sales@neuraflow.tw ｜ 02-2655-7788</span></div>
+        <div style="border:1px solid var(--line);border-left:4px solid var(--v1);border-radius:14px;padding:18px 22px;background:var(--panel)"><b style="color:var(--v2);display:block;font-size:12.5px;letter-spacing:.16em">技術支援</b><span>support@neuraflow.tw（工作日 24 小時內回覆）</span></div>
+        <div style="border:1px solid var(--line);border-left:4px solid var(--v1);border-radius:14px;padding:18px 22px;background:var(--panel)"><b style="color:var(--v2);display:block;font-size:12.5px;letter-spacing:.16em">營業時間</b><span>週一至週五 09:30–18:30</span></div>
+      </div>
+      <div style="margin-top:20px"><a class="btn" href="booking.html" style="width:100%;text-align:center">開始免費試用</a></div>
+    </div>
+    <div class="form">
+      <h3 style="margin-top:0;color:var(--v2)">洽詢表單</h3>
+      <form data-fake="感謝來訊！我們將於一個工作天內回覆。">
+        <div><label for="ct-name">姓名 *</label><input id="ct-name" type="text" placeholder="王小明" required></div>
+        <div><label for="ct-email">電子信箱 *</label><input id="ct-email" type="email" placeholder="name@company.com" required></div>
+        <div><label for="ct-phone">聯絡電話</label><input id="ct-phone" type="tel" placeholder="0912-345-678"></div>
+        <div><label for="ct-type">洽詢類型</label><select id="ct-type"><option>產品與試用</option><option>企業方案報價</option><option>技術支援</option><option>媒體採訪</option><option>其他</option></select></div>
+        <div><label for="ct-msg">訊息內容</label><textarea id="ct-msg" rows="4" placeholder="請簡述需求或問題…"></textarea></div>
+        <button class="btn" type="submit">送出訊息</button>
+        <p class="msg" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="f-grid">
+    <div>
+      <h5>NEURA FLOW</h5>
+      <p>為團隊打造的 AI 工作流平台，把散落的文件、會議與知識，變成可被詢問的團隊記憶。</p>
+    </div>
+    <div>
+      <h5>產品</h5>
+      <a href="services.html">產品功能</a>
+      <a href="service-detail.html">智慧摘要</a>
+      <a href="booking.html">免費試用</a>
+    </div>
+    <div>
+      <h5>資源</h5>
+      <a href="blog.html">產品誌</a>
+      <a href="faq.html">常見問題</a>
+      <a href="process.html">導入流程</a>
+    </div>
+    <div>
+      <h5>公司</h5>
+      <a href="about.html">關於我們</a>
+      <a href="contact.html">聯絡我們</a>
+      <a href="reviews.html">客戶評價</a>
+    </div>
+  </div>
+  <div class="fmeta">© 2026 NEURA FLOW Inc. ｜ 台北市南港區忠孝東路六段 45 號 3F ｜ hello@neuraflow.tw</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

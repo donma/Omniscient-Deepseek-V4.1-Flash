@@ -1,0 +1,33 @@
+{
+  "id": "template-007",
+  "name": "Jazz Club",
+  "industryCategory": "餐飲甜點",
+  "industry": [
+    "爵士酒吧",
+    "Livehouse",
+    "音樂復古餐酒館"
+  ],
+  "colors": [
+    "黑金復古"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "黑膠封套 Hero",
+    "打孔門票卡",
+    "復古海報牆",
+    "史坦威老琴傳承",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "MusicVenue Schema"
+  ],
+  "layout": [
+    "影音 / 氛圍導向"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

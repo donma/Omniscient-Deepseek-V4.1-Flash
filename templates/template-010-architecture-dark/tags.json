@@ -1,0 +1,33 @@
+{
+  "id": "template-010",
+  "name": "Architecture Dark",
+  "industryCategory": "空間生活",
+  "industry": [
+    "建築師事務所",
+    "室內建築設計",
+    "空間規劃公司"
+  ],
+  "colors": [
+    "黑灰建築"
+  ],
+  "backgroundMode": "dark",
+  "features": [
+    "左側固定 Rail 專案導覽",
+    "座標編號案例列表",
+    "剖面技術圖標註",
+    "工法編號格網",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "Organization Schema"
+  ],
+  "layout": [
+    "Case Study Index 案例索引型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

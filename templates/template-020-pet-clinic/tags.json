@@ -1,0 +1,33 @@
+{
+  "id": "template-020",
+  "name": "Pet Clinic",
+  "industryCategory": "寵物服務",
+  "industry": [
+    "動物醫院",
+    "犬貓專科門診",
+    "寵物預防保健中心"
+  ],
+  "colors": [
+    "白綠信任"
+  ],
+  "backgroundMode": "light",
+  "features": [
+    "柔和氣泡 Organic UI",
+    "Blob 遮罩照片與漂浮標籤",
+    "大圓角果凍卡片",
+    "對話氣泡客評",
+    "FAQ",
+    "表單假送出",
+    "強 SEO",
+    "VeterinaryCare Schema"
+  ],
+  "layout": [
+    "Split Trust 專業信任型"
+  ],
+  "pages": 12,
+  "hasZip": false,
+  "hasPrompt": true,
+  "hasPreview": true,
+  "imageRich": true,
+  "status": "candidate"
+}

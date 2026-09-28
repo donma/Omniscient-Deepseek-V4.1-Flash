@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG 會幻覺嗎？談引用式回答的三道防線｜NEURA FLOW 產品誌</title>
+<meta name="description" content="解析 RAG 架構中降低幻覺的三道防線：檢索品質、權限過濾與生成限制。">
+<link rel="canonical" href="blog-detail.html">
+<meta property="og:title" content="RAG 會幻覺嗎？談引用式回答的三道防線｜NEURA FLOW 產品誌">
+<meta property="og:description" content="解析 RAG 架構中降低幻覺的三道防線：檢索品質、權限過濾與生成限制。">
+<meta property="og:image" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "RAG 會幻覺嗎？談引用式回答的三道防線", "author": {"@type": "Person", "name": "陳思樺"}, "datePublished": "2026-03-24", "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80"}</script>
+</head>
+<body>
+<header class="hd">
+  <div class="hd-in">
+    <a class="brand" href="index.html"><span class="mark">◈</span>NEURA FLOW</a>
+    <nav class="pillnav" aria-label="主要選單">
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="services.html">產品功能</a></li>
+        <li><a href="portfolio.html">成功案例</a></li>
+        <li><a href="process.html">導入流程</a></li>
+        <li><a href="blog.html" class="active">產品誌</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </nav>
+    <a class="cta" href="booking.html">免費試用</a>
+    <button class="burger" id="burger" aria-label="開啟選單" aria-expanded="false">☰</button>
+  </div>
+  <nav class="drawer" id="drawer" aria-label="手機選單">
+    <a href="index.html">首頁</a>
+    <a href="about.html">關於我們</a>
+    <a href="services.html">產品功能</a>
+    <a href="service-detail.html">功能詳情</a>
+    <a href="portfolio.html">成功案例</a>
+    <a href="reviews.html">客戶評價</a>
+    <a href="faq.html">常見問題</a>
+    <a href="booking.html">免費試用</a>
+    <a href="process.html">導入流程</a>
+    <a href="blog.html">產品誌</a>
+    <a href="blog-detail.html">文章內頁</a>
+    <a href="contact.html">聯絡我們</a>
+  </nav>
+</header>
+
+<section class="sec" style="padding-top:60px">
+  <div class="wrap article">
+    <p class="kicker"><a href="blog.html" style="color:var(--v2);border-bottom:1px solid">← 回產品誌</a> ｜ AI ARCHITECTURE</p>
+    <h1 style="font-size:clamp(30px,4.4vw,46px);margin:14px 0 18px">RAG 會幻覺嗎？<br>談引用式回答的三道防線</h1>
+    <p class="lead" style="color:var(--v2)">撰文：陳思樺（共同創辦人 / CTO） ｜ 發佈於 2026 年 3 月 24 日 ｜ 閱讀時間約 6 分鐘</p>
+    <figure><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80" alt="AI 知識檢索概念視覺"><figcaption>檢索、過濾、生成——三道防線環環相扣，缺一不可。</figcaption></figure>
+    <h2>先講結論：會，但可以把它壓到可接受的範圍</h2>
+    <p>任何語言模型都有幻覺風險，RAG（檢索增強生成）無法讓它歸零，但能讓錯誤「有跡可循」。我們的作法是在三個環節各設一道防線。</p>
+    <h2>防線一：檢索品質決定上限</h2>
+    <p>如果召回的段落本身就是錯的，再好的模型也生不出對的答案。我們採混合檢索（向量 + 關鍵字），並對文件切片大小、重疊與元資料標記做細部調校，確保「該被找到的段落」排在前列。</p>
+    <div class="mod" style="margin:26px 0">
+      <p class="tag">實務數字</p>
+      <p style="margin-top:8px">在客戶導入的前兩週，我們通常會花最多時間在<strong>調校檢索</strong>，而不是調模型。檢索 Recall 從 82% 提升到 94%，使用者感受到的答案品質差異，遠大於換一個更大的模型。</p>
+    </div>
+    <h2>防線二：權限過濾在生成之前</h2>
+    <p>多數資安事故不是幻覺，而是「不該看到的內容被說出來」。我們把權限過濾放在生成<strong>之前</strong>：召回的段落先依使用者權限過濾，沒有足夠證據就直接回答「查無資料」，而不是用模型的先驗知識補空。</p>
+    <h2>防線三：生成限制與引用強制</h2>
+    <p>提示層我們強制兩件事：只根據召回段落回答，以及每一句話都要帶引用。當模型試圖加入訓練知識時，引用機制會讓這件事「露出破綻」，使用者一眼可見。</p>
+    <ul>
+      <li>證據不足 → 明確回答「資料庫中沒有這筆資訊」</li>
+      <li>多來源衝突 → 並列不同說法並附各自出處</li>
+      <li>可回報機制 → 每則回答可標記不準確，進入調校佇列</li>
+    </ul>
+    <h2>結論</h2>
+    <p>幻覺不是「開或關」的問題，而是「風險管理」的問題。當回答可追溯、權限正確、證據不足時敢說不知道，AI 才有資格成為團隊的記憶體。</p>
+    <p style="margin-top:40px;border-top:1px solid var(--line);padding-top:28px"><a class="btn" href="booking.html">開始 14 天免費試用</a></p>
+  </div>
+</section>
+<footer>
+  <div class="f-grid">
+    <div>
+      <h5>NEURA FLOW</h5>
+      <p>為團隊打造的 AI 工作流平台，把散落的文件、會議與知識，變成可被詢問的團隊記憶。</p>
+    </div>
+    <div>
+      <h5>產品</h5>
+      <a href="services.html">產品功能</a>
+      <a href="service-detail.html">智慧摘要</a>
+      <a href="booking.html">免費試用</a>
+    </div>
+    <div>
+      <h5>資源</h5>
+      <a href="blog.html">產品誌</a>
+      <a href="faq.html">常見問題</a>
+      <a href="process.html">導入流程</a>
+    </div>
+    <div>
+      <h5>公司</h5>
+      <a href="about.html">關於我們</a>
+      <a href="contact.html">聯絡我們</a>
+      <a href="reviews.html">客戶評價</a>
+    </div>
+  </div>
+  <div class="fmeta">© 2026 NEURA FLOW Inc. ｜ 台北市南港區忠孝東路六段 45 號 3F ｜ hello@neuraflow.tw</div>
+</footer>
+<button class="totop" id="totop" aria-label="回到頂部">↑</button>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

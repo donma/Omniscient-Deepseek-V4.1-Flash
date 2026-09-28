@@ -1,0 +1,141 @@
+/* T018 v2 — Metro Transit Map Language */
+    :root{
+  --bg:#f4f6fb; --bg2:#e6ebf5; --panel:#ffffff; --line:#c5d0e3;
+  --metro-blue:#0052cc; --metro-yellow:#ffab00; --metro-red:#de350b; --metro-green:#00875a;
+  --txt:#091e42; --muted:#505f79; --mono:"Consolas",monospace; --sans:"Noto Sans TC",sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--txt);font-family:var(--sans);line-height:1.75}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    h1,h2,h3,h4{color:var(--txt);font-weight:900;letter-spacing:.02em}
+    :focus-visible{outline:3px solid var(--metro-blue);outline-offset:3px}
+    .wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+    .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.3em;color:var(--metro-blue);text-transform:uppercase;margin-bottom:8px;font-weight:700}
+    .sec{padding:80px 0}
+    .sec-alt{background:var(--bg2);border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+    .lead{color:var(--muted);max-width:620px}
+    .btn{display:inline-block;padding:13px 30px;background:var(--metro-blue);color:#fff;font-family:var(--mono);font-weight:900;letter-spacing:.08em;border-radius:4px;border:none;transition:.2s}
+    .btn:hover{background:#0747a6;box-shadow:0 6px 18px rgba(0,82,204,.3)}
+    .btn-yellow{background:var(--metro-yellow);color:#172b4d}
+    .btn-yellow:hover{background:#ff9900;color:#000}
+    .btn-ghost{background:transparent;color:var(--metro-blue);border:2px solid var(--metro-blue)}
+    .btn-ghost:hover{background:var(--metro-blue);color:#fff}
+
+    /* 地鐵線路頂部色條（Blue / Yellow / Green / Red） */
+    .metro-lines{height:8px;background:linear-gradient(90deg,var(--metro-blue) 0 25%,var(--metro-yellow) 25% 50%,var(--metro-green) 50% 75%,var(--metro-red) 75% 100%)}
+    header.hd{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.98);border-bottom:2px solid var(--txt);backdrop-filter:blur(10px)}
+    .hd-in{max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px}
+    .station-pill{background:var(--metro-blue);color:#fff;font-family:var(--mono);font-weight:900;font-size:15px;padding:4px 12px;border-radius:999px;letter-spacing:.1em}
+    .brand-title{font-size:20px;font-weight:900;letter-spacing:.04em}
+    .brand-title small{display:block;font-size:10px;color:var(--muted);font-family:var(--mono);letter-spacing:.25em}
+    .nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    .nav a{font-family:var(--mono);font-size:13.5px;color:var(--txt);font-weight:800;padding:4px 8px;border-radius:3px}
+    .nav a:hover{background:var(--bg2);color:var(--metro-blue)}
+    .nav a.active{background:var(--metro-blue);color:#fff}
+    .burger{display:none;width:44px;height:44px;background:var(--metro-blue);border:none;color:#fff;font-size:20px}
+    .drawer{display:none;background:#fff;border-bottom:2px solid var(--txt);padding:10px 24px 18px}
+    .drawer.open{display:block}
+    .drawer a{display:block;padding:12px 4px;border-bottom:1px solid var(--line);font-size:16px;font-family:var(--mono);font-weight:800}
+
+    /* Hero: 站牌式大標題 + 線路圖指示牌 */
+    .station-hero{padding:60px 0 54px;border-bottom:2px solid var(--line);background:#fff}
+    .hero-layout{display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}
+    .station-sign{display:inline-block;border:3px solid var(--txt);background:#fff;padding:8px 24px;margin-bottom:18px;box-shadow:4px 4px 0 var(--txt)}
+    .station-sign span{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.3em}
+    .station-sign b{display:block;font-size:24px;font-weight:900;color:var(--metro-blue);letter-spacing:.15em}
+    .hero-copy h1{font-size:clamp(36px,5vw,62px);line-height:1.15;margin:0 0 16px}
+    .hero-copy h1 em{font-style:normal;color:var(--metro-blue)}
+    .hero-copy p{color:var(--muted);font-size:16.5px;max-width:500px}
+    .hero-cta{margin-top:28px;display:flex;gap:14px;flex-wrap:wrap}
+
+    /* 地鐵線路圖架構（Transit Route Map） */
+    .transit-map{background:var(--bg2);border:2px solid var(--txt);border-radius:12px;padding:32px 28px;position:relative}
+    .map-line-bar{display:flex;align-items:center;margin-bottom:26px}
+    .line-badge{background:var(--metro-blue);color:#fff;font-family:var(--mono);font-size:12px;font-weight:900;padding:4px 12px;border-radius:4px;margin-right:12px}
+    .map-title{font-family:var(--mono);font-size:13px;font-weight:900;color:var(--txt)}
+    .station-nodes{display:grid;gap:18px;position:relative;padding-left:36px}
+    .station-nodes::before{content:"";position:absolute;left:11px;top:10px;bottom:10px;width:6px;background:var(--metro-blue);border-radius:3px}
+    .node{position:relative}
+    .node::before{content:"";position:absolute;left:-36px;top:4px;width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid var(--metro-blue)}
+    .node.current::before{border-color:var(--metro-red);background:var(--metro-yellow)}
+    .node h4{margin:0 0 2px;font-size:17px}
+    .node span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+
+    /* 地鐵站票價階梯表（Ticket Fare Gate） */
+    .fares{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .fare-card{background:#fff;border:2px solid var(--txt);border-radius:8px;padding:28px 24px;box-shadow:6px 6px 0 var(--txt);position:relative}
+    .fare-card .zone-flag{position:absolute;top:-12px;left:20px;background:var(--metro-yellow);color:#172b4d;font-family:var(--mono);font-size:11px;font-weight:900;padding:3px 12px;border:2px solid var(--txt)}
+    .fare-card h3{margin:8px 0 6px;font-size:22px}
+    .fare-card .fee{font-family:var(--mono);font-size:36px;color:var(--metro-blue);font-weight:900;margin-bottom:14px}
+    .fare-card .fee small{font-size:14px;color:var(--muted);font-weight:400}
+    .fare-card ul{list-style:none;padding:0;margin:0 0 20px;font-size:14px;color:var(--muted)}
+    .fare-card li{padding:6px 0;border-bottom:1px solid var(--bg2)}
+    .fare-card li::before{content:"● ";color:var(--metro-blue);font-size:10px}
+
+    /* 外師乘車證吊牌（Staff ID Lanyard） */
+    .staff-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .staff{background:#fff;border:2px solid var(--txt);border-radius:12px;padding:24px;box-shadow:6px 6px 0 var(--txt);position:relative}
+    .staff .clip{width:40px;height:12px;background:#999;border:2px solid var(--txt);border-radius:4px;margin:0 auto 16px}
+    .staff img{height:220px;width:100%;object-fit:cover;border:2px solid var(--txt);border-radius:4px;margin-bottom:14px}
+    .staff .id-no{font-family:var(--mono);font-size:11px;color:var(--metro-blue);letter-spacing:.15em;font-weight:900}
+    .staff h4{margin:4px 0 4px;font-size:19px}
+    .staff p{color:var(--muted);font-size:13.5px;margin:0}
+
+    /* quote / faq / form / table / blog */
+    .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .quote-card{background:#fff;border-left:6px solid var(--metro-blue);border-top:2px solid var(--txt);border-right:2px solid var(--txt);border-bottom:2px solid var(--txt);padding:22px}
+    .quote-card p{font-size:16px;color:var(--txt);margin:0 0 8px}
+    .quote-card span{font-family:var(--mono);font-size:12px;color:var(--muted)}
+    .faq{border-top:2px solid var(--txt)}
+    .faq details{border-bottom:1px solid var(--line);padding:18px 4px}
+    .faq summary{cursor:pointer;font-size:16.5px;color:var(--txt);list-style:none;display:flex;justify-content:space-between;font-weight:900}
+    .faq summary::after{content:"+";color:var(--metro-blue);font-family:var(--mono);font-size:20px}
+    .faq details[open] summary::after{content:"−"}
+    .faq p{color:var(--muted);margin:14px 0 0}
+    .form{background:#fff;border:3px solid var(--txt);box-shadow:8px 8px 0 var(--metro-blue);padding:36px}
+    .form label{display:block;font-family:var(--mono);font-size:12.5px;letter-spacing:.08em;color:var(--metro-blue);margin:16px 0 6px;font-weight:900}
+    .form input,.form select,.form textarea{width:100%;background:var(--bg);border:2px solid var(--txt);color:var(--txt);padding:12px 14px;border-radius:4px;font-family:var(--sans)}
+    .form input:focus,.form textarea:focus,.form select:focus{border-color:var(--metro-blue);outline:none}
+    .form .btn{margin-top:22px;width:100%;text-align:center}
+    .form .msg{color:var(--metro-blue);margin-top:14px;font-weight:900;text-align:center;font-family:var(--mono)}
+    .tbl{width:100%;border-collapse:collapse;font-size:14.5px;background:#fff;border:2px solid var(--txt)}
+    .tbl th,.tbl td{border:1px solid var(--line);padding:13px 15px;text-align:left}
+    .tbl th{background:var(--metro-blue);color:#fff;font-family:var(--mono);font-size:12.5px}
+    .tbl td b{color:var(--metro-blue)}
+    .posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .post{background:#fff;border:2px solid var(--txt);box-shadow:6px 6px 0 var(--txt)}
+    .post img{height:190px;width:100%;object-fit:cover;border-bottom:2px solid var(--txt)}
+    .post .body{padding:20px}
+    .post .date{font-family:var(--mono);font-size:11.5px;color:var(--metro-blue);font-weight:700}
+    .post h3{margin:8px 0;font-size:18px}
+    .post p{color:var(--muted);font-size:14px;margin:0 0 12px}
+    .post a{color:var(--metro-blue);font-weight:900;font-size:14px}
+    .article{max-width:800px;margin:0 auto}
+    .article h2{margin-top:40px;color:var(--metro-blue)}
+    .article p,.article li{color:#253858}
+    .article figure{margin:28px 0}
+    .article figcaption{color:var(--muted);font-size:13px;margin-top:8px;font-family:var(--mono)}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+
+    footer{background:#091e42;color:#ebecf0;padding:54px 0 0}
+    .f-grid{max-width:1240px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+    footer h5{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--metro-yellow);margin:0 0 14px}
+    footer a{display:block;color:#c1c7d0;padding:5px 0;font-size:14px}
+    footer a:hover{color:#fff}
+    footer p{color:#8993a4;font-size:13.5px;margin:0}
+    .fmeta{border-top:1px solid #253858;margin-top:40px;text-align:center;padding:20px;color:#6b778c;font-size:12.5px;font-family:var(--mono)}
+    .totop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;background:var(--metro-blue);color:#fff;border:none;font-size:18px;display:none;z-index:70}
+    .totop.show{display:block}
+
+    @media(max-width:960px){
+  .hero-layout,.fares,.staff-cards,.grid2,.grid3,.f-grid{grid-template-columns:1fr}
+  .nav{display:none}
+  .burger{display:block}
+    }
+    @media(max-width:640px){
+  .sec{padding:54px 0}
+    }
+    
